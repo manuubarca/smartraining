@@ -8,9 +8,6 @@ class Plan {
     }
 }
 
-console.log(Plan)
-
-
 //Declaro los diferentes planes que tiene el gimnasio
 
 //Entrenamiento Funcional
@@ -28,18 +25,28 @@ const freeOcho = new Plan('SMARTFREE', 8, 1000, (8, 9, 17, 18, 21));
 const freeDoce = new Plan('SMARTFREE', 12, 1100, (8, 9, 17, 18, 21));
 const freeVeinte = new Plan('SMARTFREE', 20, 1200, (8, 9, 17, 18, 21));
 
-
 //Pase libre
 const freePass = new Plan('FREEPASS', 31, 1500, (8, 9, 10, 11, 15, 16, 17, 18, 19, 20, 21));
 
+//Declaro array de planes
+let planes = [
+    funOcho, funDoce, funVeinte,
+    crossOcho, crossDoce, crossVeinte,
+    freeOcho, freeDoce, freeVeinte,
+    freePass]
+
+//Recorriendo el array de planes
+planes.forEach((Plan) => {
+    console.log(Plan)
+})
 
 /*Declaro la clase Socio para los diferentes datos de interes
 del gimnasio sobre sus socios*/
 class Socio {
-    constructor(nombre, apellido, edad, sexo, email, contrasenia, numero, plan) {
+    constructor(nombre, apellido, fechaDeNacimiento, sexo, email, contrasenia, numero, plan) {
         this.nombre = nombre;
         this.apellido = apellido;
-        this.edad = edad;
+        this.fechaDeNacimiento = fechaDeNacimiento;
         this.sexo = sexo;
         this.email = email;
         this.contrasenia = contrasenia;
@@ -53,7 +60,7 @@ const socios = [];
 socios.push(new Socio(
     prompt('Ingrese su nombre'),
     prompt('Ingrese su apellido'),
-    prompt('Ingrese su edad'),
+    prompt('Ingrese su fecha de nacimiento'),
     prompt('Ingrese su sexo'),
     prompt('Ingrese su email'),
     prompt('Ingrese su contraseña'),
@@ -61,5 +68,7 @@ socios.push(new Socio(
     prompt('Ingrese su plan'),)
     );
 
-console.log(socios)
-console.log(`¡Bienvenido a Smartraining ${Socio.nombre}!`)
+//Recorriendo el array de planes
+socios.forEach((Socio) => {
+    console.log(Socio)
+})

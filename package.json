@@ -1,0 +1,14 @@
+{
+  "name": "smartraining",
+  "version": "1.0.0",
+  "description": "App dedicada al funcionamiento del gimnasio Smartraining",
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manuubarca/smartraining.git"
+  },
+
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
+}
