@@ -14,7 +14,9 @@
         <div class="bienvenida text-center text-white">
             <div class="col-6 p-3 mx-auto my-5 text-box">
                 <h1 class="fw-bolder">
-                    ¡Reservá, el gym te espera!
+                    ¡Reservá tu clase,
+                    <br>
+                    el gym te espera!
                 </h1>
                 <a class="btn btn-danger btn-lg bg-red fw-bold mb-4" href="../pages/reserva.html">
                     Reservar
@@ -102,8 +104,36 @@
                 <p class="lead">
                     Hacenos llegar cualquier inquietud
                 </p>
-                <button type="button" class="btn bg-red text-white">Sugerencias</button>
+                <button type="button" class="btn bg-red text-white" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">
+                    Sugerencias
+                </button>
             </div>
+            <div class="modal fade text-black text-start" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Nueva sugerencia</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="mb-3">
+                          <label for="recipient-name" class="col-form-label">De parte de:</label>
+                          <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="mb-3">
+                          <label for="message-text" class="col-form-label">Mensaje:</label>
+                          <textarea class="form-control" id="message-text"></textarea>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                      <button type="button" class="btn bg-red text-white">Enviar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
         </div>
         <div class="bg-black w-100 mb-5 text-center text-white overflow-hidden">
             <div class="my-3 py-3">
