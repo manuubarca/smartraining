@@ -1,0 +1,49 @@
+$red: #e30c18;
+$orange: #ff6f00;
+$white: #fff;
+$black: #000;
+$gray: #ABABAB;
+
+$warning: $orange !default;
+$danger: $red !default;
+
+
+.bg-red {
+    background-color: $red;
+}
+
+.bg-orange {
+    background-color: $orange;
+}
+
+.bg-black {
+    background-color: $black;
+}
+
+.bg-white {
+    background-color: $white;
+}
+
+.bg-gray {
+    background-color: $gray;
+}
+
+.red {
+    color: $red;
+}
+
+.orange {
+    color: $orange;
+}
+
+.white {
+    color: $white;
+}
+
+.black {
+    color: $black;
+}
+
+.gray {
+    color: $gray;
+}
