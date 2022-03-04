@@ -9,113 +9,89 @@
     <title>Document</title>
 </head>
 <body class="bg-black">
-    <main class="container-fluid mb-5 text-start">
-        <div class="container d-flex flex-column">
-            <section class="">
-                <div class="container py-5 h-100">
-                  <div class="row d-flex justify-content-center align-items-center h-100">
-                    <div class="col-12">
-                      <div class="card">
-                        <div class="card-body p-0">
-                          <div class="row g-0">
-                            <div class="col-lg-6">
-                              <form id="formSocio" class="p-5">
-                                <h3 class="fw-normal mb-5 fw-bold">Información personal</h3>
+  <main class="container-fluid mb-5 text-start">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center ">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-body p-0">
+              <div class="row g-0">
+                <form id="formSocio" class="p-5">
+                  <h3 class="fw-normal mb-5 fw-bold">
+                    Información personal
+                  </h3>
+                  <div class="row">
+                    <div class="col-md-4 mb-4 pb-2">
+                      <input type="text" placeholder="Nombre" name="nombre" id="idNombre" class="form-control" />
+                    </div>
+                    <div class="col-md-4 mb-4 pb-2">
+                      <input type="text" placeholder="Apellido" name="apellido" id="idApellido" class="form-control" />
+                    </div>
+                    <div class="col-md-4 mb-4 pb-2">
+                      <input type="file" id="img" name="img" accept="image/*">
+                    </div>
+                  </div>
+                  <div class="mb-4 pb-2">
+                    <input type="date" placeholder="Fecha de nacimiento" name="fechaDeNacimiento" id="idFechaDeNacimiento" class="form-control" />
+                  </div>
+                  <div class="row mb-4 pb-2">
+                    <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
+                      <input type="text" placeholder="Ciudad" name="ciudad" id="idCiudad" class="form-control" />
+                    </div>
+                    <div class="col-md-6">
+                      <input type="text" placeholder="Dirección" name="ciudad" id="idDireccion" class="form-control" />
+                    </div>
+                  </div>
+                  <div class="row mb-4 pb-2">
+                    <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
+                      <input type="email" placeholder="Email" name="email" class="form-control" id="idEmail">
+                    </div>
+                    <div class="col-md-6">
+                      <input type="password" placeholder="Contraseña" name="contrasenia" class="form-control" id="idContrasenia">
+                    </div>
+                  </div>
+                  <div class="mb-4 pb-2">
+                    <input type="number" placeholder="Número de celular" name="numeroDeCelular" id="idNumeroDeCelular" class="form-control" />
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
+                      <input type="text" placeholder="Prestador de salud" name="prestadorDeSalud" id="idPrestadorDeSalud" class="form-control" />
+                    </div>
+                    <div class="col-md-6">
+                      <input type="text" placeholder="Carné de salud" name="carneDeSalud" id="idCarneDeSalud" class="form-control" />
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-start align-content-center mt-4 pt-4">
+                    <button id="botonEnviarFormularioNuevoSocio" class="btn w-auto bg-red text-white form-control">
+                      Registrarme
+                    </button>
+                  </div>
+                </form>
+                <br>
+                <br>
+                <div class="row" id="divSocios">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="../js/arrays.js"></script>
+  <script src="../js/dom.js"></script>
+  <script src="../js/funciones.js"></script>
+  <script src="../js/objetos.js"></script>
+</body>
+</html>
 
-                                <div class="row">
-                                  <div class="col-md-4 mb-4 pb-2">
-              
-                                    <div class="form-outline">
-                                        <label class="form-label" for="form3Examplev2">Nombre</label>
-                                        <input type="text" id="form3Examplev2" class="form-control form-control-lg" />
-                                    </div>
-              
-                                  </div>
-                                  <div class="col-md-4 mb-4 pb-2">
-              
-                                    <div class="form-outline">
-                                        <label class="form-label" for="form3Examplev3">Apellido</label>
-                                        <input type="text" id="form3Examplev3" class="form-control form-control-lg" />
-                                    </div>
-              
-                                  </div>
 
-                                  <div class="col-md-4 mb-4 pb-2">
-                                    <label for="img">Subir una foto</label>
-                                    <input type="file" id="img" name="img" accept="image/*">
-                                  </div>
-                                </div>
-              
-                                <div class="mb-4 pb-2">
-                                  <div class="form-outline">
-                                    <label class="form-label" for="form3Examplev4">Fecha de nacimiento</label>
-                                    <input type="date" id="form3Examplev4" class="form-control form-control-lg" />
-                                  </div>
-                                </div>
-              
-                                <div class="row mb-4 pb-2">
-                                  <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
-              
-                                    <div class="form-outline">
-                                        <label class="form-label" for="form3Examplev5">Ciudad</label>
-                                        <input type="text" id="form3Examplev5" class="form-control form-control-lg" />
-                                    </div>
-              
-                                  </div>
-                                  <div class="col-md-6">
-                                        <div class="form-outline form-white">
-                                            <label class="form-label" for="form3Examplea6">Dirección</label>
-                                            <input type="text" id="form3Examplea6" class="form-control form-control-lg" />
-                                        </div>
-                                  </div>
-                                </div>
 
-                                <div class="row mb-4 pb-2">
-                                    <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
-
-                                        <div class="form-outline">
-                                            <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
-                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                          </div>
-
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <div class="form-outline">
-                                            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                                            <input type="password" class="form-control" id="exampleInputPassword1">
-                                          </div>
-
-                                    </div>
-                                </div>
-
-                                <div class="mb-4 pb-2">
-                                    <div class="form-outline form-white">
-                                        <label class="form-label" for="form3Examplea7">Número de teléfono</label>
-                                        <input type="text" id="form3Examplea7" class="form-control form-control-lg" />
-                                      </div>
-                                  </div>
-
-                                  
-                                <div class="row">
-                                    <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
-                
-                                      <div class="form-outline">
-                                        <label class="form-label" for="form3Examplev8">Prestador de salud</label>
-                                        <input type="text" id="form3Examplev8" class="form-control form-control-lg" />
-                                      </div>
-                
-                                    </div>
-                                    <div class="col-md-6">
-                                          <div class="form-outline form-white">
-                                            <label class="form-label" for="form3Examplea9">Carné de salud</label>
-                                            <input type="text" id="form3Examplea9" class="form-control form-control-lg" />
-                                          </div>
-                                    </div>
-                                </div>
-                              </form>
-                            </div>
-                            <div class="col-lg-6 bg-gray">
+<!--Segunda parte del formulario
+  <div class="col-lg-6 bg-gray">
                               <div class="p-5">
                                 <h3 class="fw-normal mb-5 fw-bold">Información de socio</h3>
               
@@ -187,15 +163,4 @@
               
                               </div>
                             </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-        </div>
-    </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-</body>
-</html>
+-->
