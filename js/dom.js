@@ -7,18 +7,23 @@ let divSocios = document.getElementById('divSocios');
 formSocio.addEventListener('submit', (e) => {
     //Como no tengo servidor, prevengo el comportamiento por defecto del formulario
     e.preventDefault()
-    let nombreImput = document.getElementById('idNombre').value
-    let apellidoImput = document.getElementById('idApellido').value
-    let fechaDeNacimientoImput = document.getElementById('idFechaDeNacimiento').value
-    let sexoImput = document.getElementById('idSexo').value
-    let ciudadImput = document.getElementById('idCiudad').value
-    let direccionImput = document.getElementById('idDireccion').value
-    let emailImput = document.getElementById('idEmail').value
-    let contraseniaImput = document.getElementById('idContrasenia').value
-    let numeroDeCelularImput = document.getElementById('idNumeroDeCelular').value
-    let prestadorDeSaludImput = document.getElementById('idPrestadorDeSalud').value
-    let carneDeSaludImput = document.getElementById('idCarneDeSalud').value
-    socios.push({
+    let nombre = document.getElementById('idNombre').value
+    let apellido = document.getElementById('idApellido').value
+    let fechaDeNacimiento = document.getElementById('idFechaDeNacimiento').value
+    let sexo = document.getElementById('idSexo').value
+    let ciudad = document.getElementById('idCiudad').value
+    let direccion = document.getElementById('idDireccion').value
+    let email = document.getElementById('idEmail').value
+    let contrasenia = document.getElementById('idContrasenia').value
+    let numeroDeCelular = document.getElementById('idNumeroDeCelular').value
+    let prestadorDeSalud = document.getElementById('idPrestadorDeSalud').value
+    let carneDeSalud = document.getElementById('idCarneDeSalud').value
+
+    const socio = new Socio(nombre, apellido, fechaDeNacimiento, sexo, ciudad, direccion, email, contrasenia, numeroDeCelular, prestadorDeSalud, carneDeSalud, plan);
+
+    socios.push(socio)
+    console.log(socios)
+    /*socios.push({
         nombreSocio: nombreImput,
         apellidoSocio: apellidoImput,
         fechaDeNacimientoSocio: fechaDeNacimientoImput,
@@ -30,7 +35,7 @@ formSocio.addEventListener('submit', (e) => {
         numeroDeCelularSocio: numeroDeCelularImput,
         prestadorDeSaludSocio: prestadorDeSaludImput,
         carneDeSaludSocio: carneDeSaludImput,
-    })
+    })*/
     formSocio.reset()
 })
 
@@ -47,46 +52,46 @@ botonRegistrarse.addEventListener('clic', () => {
                 </h3>
                 <div class="row">
                     <div class="col-md-4 mb-4 pb-2">
-                        <p>Nombre: ${Socio.nombreImput}
+                        <p>Nombre: ${Socio.nombre}
                     </div>
                     <div class="col-md-4 mb-4 pb-2">
-                        <p>Apellido: ${Socio.apellidoImput}
+                        <p>Apellido: ${Socio.apellido}
                     </div>
                     <div class="col-md-4 mb-4 pb-2">
                         <input type="file" id="img" name="img" accept="image/*">
                     </div>
                 </div>
                 <div class="mb-4 pb-2">
-                    <p>Apellido: ${Socio.fechaDeNacimientoImput}
+                    <p>Apellido: ${Socio.fechaDeNacimiento}
                 </div>
                 <div class="row mb-4 pb-2">
                     <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
-                        <p>Ciudad: ${Socio.ciudadImput}
+                        <p>Ciudad: ${Socio.ciudad}
                     </div>
                     <div class="col-md-6">
-                        <p>Dirección: ${Socio.direccionImput}
+                        <p>Dirección: ${Socio.direccion}
                     </div>
                 </div>
                 <div class="row mb-4 pb-2">
                     <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
-                        <p>Email: ${Socio.emailImput}
+                        <p>Email: ${Socio.email}
                     </div>
                     <div class="col-md-6">
-                        <p>Apellido: ${Socio.contraseniaImput}
+                        <p>Apellido: ${Socio.contrasenia}
                     </div>
                 </div>
                 <div class="mb-4 pb-2">
-                    <p>Número de celular: ${Socio.numeroDeCelularImput}
+                    <p>Número de celular: ${Socio.numeroDeCelular}
                 </div>
                 <div class="row">
                     <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
-                        <p>Apellido: ${Socio.prestadorDeSaludImput}
+                        <p>Apellido: ${Socio.prestadorDeSalud}
                     </div>
                     <div class="col-md-6">
-                        <p>Apellido: ${Socio.carneDeSaludImput}
+                        <p>Apellido: ${Socio.carneDeSalud}
                     </div>
                 </div>
             </div>
         `
-    });
+    })
 })

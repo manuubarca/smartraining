@@ -13,7 +13,6 @@ planes.forEach((Plan) => {
 
 //Declaro el array para pedirle los datos al usuario
 const socios = [];
-socios.push(new Socio(nombre, apellido, fechaDeNacimiento, sexo, email, contrasenia, numero, plan));
 
 //Recorriendo el array de planes
 socios.forEach((Socio) => {
