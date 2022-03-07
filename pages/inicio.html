@@ -25,7 +25,7 @@
         </div>
         <div class="bg-red w-100 text-center overflow-hidden">
             <div class="my-3 p-3 text-white">
-                <h2 class="display-5">
+                <h2 class="">
                     ¿Quienes somos?
                 </h2>
                 <p class="lead">
@@ -35,39 +35,131 @@
                     <img src="../assets/img/andres.png" class="img-fluid shadow-lg rounded-circle" alt="">
                 </div>
             </div>
-          </div>
-          <div class="bg-orange w-100 text-center text-white overflow-hidden">
-            <div class="my-3 py-3">
-                <h2 class="display-5">
+        </div>
+        <div class="bg-orange w-100 text-center text-white overflow-hidden">
+            <div class="row d-flex flex-column align-items-center my-3 py-3">
+                <h2 class="col-10">
                     ¿Ya conoces nuestros planes?
                 </h2>
-                <p class="lead">
+                <p class="col-12 lead">
                     Tenemos el justo para alcanzar tus objetivos
                 </p>
-                <div class="list-group w-50 mx-auto shadow">
-                    <a href="./planes.html" class="list-group-item list-group-item-action fw-bold">SMARTFUN</a>
-                    <a href="./planes.html" class="list-group-item list-group-item-action fw-bold">SMARTCROSS</a>
-                    <a href="./planes.html" class="list-group-item list-group-item-action fw-bold">SMARTFREE</a>
-                    <a href="./planes.html" class="list-group-item list-group-item-action fw-bold">FREEPASS</a>
+                <div class="mx-auto px-5">
+                    <div class="row d-flex flex-row align-items-center mb-3">
+                        <h3 class="col-6">
+                            <a href="./planes.html" class="btn btn-outline-light text-decoration-none fw-bold">
+                                SMARTFUN
+                            </a>
+                        </h3>
+                        <img src="../assets/img/fun.png" class="col-6 rounded-circle img-fluid" alt="">
+                    </div>
+                    <div class="row d-flex flex-row align-items-center my-3">
+                        <img src="../assets/img/cross.png" class="col-6 rounded-circle img-fluid" alt="">
+                        <h3 class="col-6">
+                            <a href="./planes.html" class="btn btn-outline-light text-decoration-none  fw-bold text-white">
+                                SMARTCROSS
+                            </a>
+                        </h3>
+                    </div>
+                    <div class="row d-flex flex-row align-items-center my-3">
+                        <h3 class="col-6">
+                            <a href="./planes.html" class="btn btn-outline-light text-decoration-none fw-bold text-white">
+                                SMARTFREE
+                            </a>
+                        </h3>
+                        <img src="../assets/img/free.png" class="col-6 rounded-circle img-fluid" alt="">
+                    </div>
+                    <div class="row d-flex flex-row align-items-center my-3">
+                        <img src="../assets/img/freepass.png" class="col-6 rounded-circle img-fluid" alt="">
+                        <h3 class="col-6">
+                            <a href="./planes.html" class="btn btn-outline-light text-decoration-none fw-bold text-white">
+                                FREEPASS
+                            </a>
+                        </h3>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="bg-gray text-white w-100 text-center overflow-hidden">
             <div class="my-3 p-3">
-                <h2 class="display-5">
+                <h2 class="">
                     Estos son nuestros horarios
                 </h2>
                 <p class="lead">
-                    ¡Elegí libremente el de tu preferencia!
+                    ¡Son los mismos todos los días!
                 </p>
             </div>
-            <div class="mx-auto fotos-inicio">
-                <img src="../assets/img/horarios.jpg" class="img-fluid shadow-lg rounded-top" alt="">
+            <div class="container">
+                <div class="accordion shadow mb-5 text-black" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                SMARTFUN
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p class="border-bottom pb-3">
+                                    11:00 - 12:00
+                                </p>
+                                <p class="border-bottom pb-3">
+                                    16:00 - 17:00
+                                </p>
+                                <p>
+                                    19:00 - 20:00
+                                </p>                    
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                SMARTCROSS
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p class="border-bottom pb-3">
+                                    11:00 - 12:00
+                                </p>
+                                <p class="border-bottom pb-3">
+                                    16:00 - 17:00
+                                </p>
+                                <p>
+                                    19:00 - 20:00
+                                </p>                    
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                SMARTFREE                    
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p class="border-bottom pb-3">
+                                    08:00 - 09:00
+                                </p>
+                                <p class="border-bottom pb-3">
+                                    09:00 - 10:00
+                                </p>
+                                <p class="border-bottom pb-3">
+                                    17:00 - 18:00
+                                </p>
+                                <p>
+                                    21:00 - 22:00
+                                </p>                    
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="bg-black w-100 text-center text-white overflow-hidden">
             <div class="my-3 py-3">
-                <h2 class="display-5">
+                <h2 class="">
                     ¿Dónde estamos?
                 </h2>
                 <p class="lead">
@@ -80,7 +172,7 @@
         </div>
         <div class="bg-red w-100 text-center text-white overflow-hidden">
             <div class="my-3 py-3">
-                <h2 class="display-5">
+                <h2 class="">
                     Seguinos en nuestras redes sociales
                 </h2>
                 <p class="lead">
@@ -92,13 +184,13 @@
         </div>
         <div class="bg-orange w-100 text-center overflow-hidden">
             <div class="my-3 p-3 text-white">
-              <h2 class="display-5">Beneficios</h2>
+              <h2 class="">Beneficios</h2>
               <p class="lead">Conoce las ventajas de ser un <a href="../pages/beneficios.html" class="text-decoration-none"><i class="fw-bold text-black">#Smartrainer</i></p></a>
             </div>
           </div>
           <div class="bg-gray w-100 text-center text-white overflow-hidden">
             <div class="my-3 p-3">
-                <h2 class="display-5">
+                <h2 class="">
                     ¡Queremos escucharte!
                 </h2>
                 <p class="lead">
@@ -118,7 +210,7 @@
                     <div class="modal-body">
                       <form>
                         <div class="mb-3">
-                          <label for="recipient-name" class="col-form-label">De parte de:</label>
+                          <label for="recipient-name" class="col-form-label">Nombre:</label>
                           <input type="text" class="form-control" id="recipient-name">
                         </div>
                         <div class="mb-3">
@@ -137,7 +229,7 @@
         </div>
         <div class="bg-black w-100 mb-5 text-center text-white overflow-hidden">
             <div class="my-3 py-3">
-                <h2 class="display-5">
+                <h2 class="">
                     ¿Dudas?
                 </h2>
                 <p class="lead">

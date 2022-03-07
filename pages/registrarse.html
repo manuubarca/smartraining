@@ -14,59 +14,134 @@
       <div class="row d-flex justify-content-center align-items-center ">
         <div class="col-12">
           <div class="card">
-            <div class="card-body p-0">
+            <div class="card-body bg-light p-0">
               <div class="row g-0">
-                <form id="formSocio" class="p-5">
-                  <h3 class="fw-normal mb-5 fw-bold">
-                    Información personal
-                  </h3>
-                  <div class="row">
-                    <div class="col-md-4 mb-4 pb-2">
-                      <input type="text" placeholder="Nombre" name="nombre" id="idNombre" class="form-control" />
+                <form id="formSocio" class="col-12 d-flex flex-xxl-row flex-xl-row flex-lg-row flex-md-column flex-column">
+                  <div class="col-lg-6 col-md-12 p-5 bg-white">
+                    <h3 class="fw-normal mb-5 fw-bold">
+                      Información personal
+                    </h3>
+                    <div class="row">
+                      <div class="col-md-4 mb-4 pb-2">
+                        <input type="text" placeholder="Nombre" name="nombre" id="idNombre" class="form-control" />
+                      </div>
+                      <div class="col-md-4 mb-4 pb-2">
+                        <input type="text" placeholder="Apellido" name="apellido" id="idApellido" class="form-control" />
+                      </div>
+                      <div class="col-md-4 mb-4 pb-2">
+                        <input type="file" id="img" name="img" accept="image/*" class="form-select p-0">
+                      </div>
                     </div>
-                    <div class="col-md-4 mb-4 pb-2">
-                      <input type="text" placeholder="Apellido" name="apellido" id="idApellido" class="form-control" />
+                    <div class="row mb-4 pb-2">
+                      <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
+                        <input type="date" placeholder="Fecha de nacimiento" name="fechaDeNacimiento" id="idFechaDeNacimiento" class="form-control" />
+                      </div>
+                      <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
+                        <select name="sexo" id="idSexo" class="form-select">
+                          <option value="1" selected></option>
+                          <option value="2">Mujer</option>
+                          <option value="3">Hombre</option>
+                          <option value="4">Otro</option>
+                        </select>
+                      </div>
                     </div>
-                    <div class="col-md-4 mb-4 pb-2">
-                      <input type="file" id="img" name="img" accept="image/*">
+                    <div class="row mb-4 pb-2">
+                      <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
+                        <input type="text" placeholder="Ciudad" name="ciudad" id="idCiudad" class="form-control" />
+                      </div>
+                      <div class="col-md-6">
+                        <input type="text" placeholder="Dirección" name="ciudad" id="idDireccion" class="form-control" />
+                      </div>
+                    </div>
+                    <div class="row mb-4 pb-2">
+                      <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
+                        <input type="email" placeholder="Email" name="email" class="form-control" id="idEmail">
+                      </div>
+                      <div class="col-md-6">
+                        <input type="password" placeholder="Contraseña" name="contrasenia" class="form-control" id="idContrasenia">
+                      </div>
+                    </div>
+                    <div class="mb-4 pb-2">
+                      <input type="tel" placeholder="Número de celular" name="numeroDeCelular" id="idNumeroDeCelular" class="form-control" />
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
+                        <input type="text" placeholder="Prestador de salud" name="prestadorDeSalud" id="idPrestadorDeSalud" class="form-control" />
+                      </div>
+                      <div class="col-md-6">
+                        <input type="text" placeholder="Carné de salud" name="carneDeSalud" id="idCarneDeSalud" class="form-control" />
+                      </div>
                     </div>
                   </div>
-                  <div class="mb-4 pb-2">
-                    <input type="date" placeholder="Fecha de nacimiento" name="fechaDeNacimiento" id="idFechaDeNacimiento" class="form-control" />
-                  </div>
-                  <div class="row mb-4 pb-2">
-                    <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
-                      <input type="text" placeholder="Ciudad" name="ciudad" id="idCiudad" class="form-control" />
+                  <div class="col-lg-6 col-md-12 bg-gray p-5">
+                    <h3 class="fw-normal mb-5 fw-bold">
+                      Información de socio
+                    </h3>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12 mb-4 pb-2">
+                          <div id="contenedorNombrePlanes" class="">
+                            <label class="form-label" for="idNombreDePlan">Nombre de Plan</label>
+                            <select class="form-select">
+                              <option selected></option>
+                              <option value="1">SMARTFUN</option>
+                              <option value="2">SMARTCROSS</option>
+                              <option value="3">SMARTFREE</option>
+                              <option value="4">FREEPASS</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12 mb-4 pb-2">
+                          <div class="">
+                            <label class="form-label" for="idCantidadDeDias">Cantidad de días</label>
+                            <select class="form-select">
+                              <option selected></option>
+                              <option value="1">8</option>
+                              <option value="2">12</option>
+                              <option value="3">20</option>
+                              <option value="4">31</option>
+                            </select>
+                            <p class="form-text fst-italic">
+                              Cantidad de asistencias que tendrá disponibles durante 31 días corridos.
+                            </p>
+                          </div>
+                        </div>
                     </div>
-                    <div class="col-md-6">
-                      <input type="text" placeholder="Dirección" name="ciudad" id="idDireccion" class="form-control" />
+                    <div class="row">
+                      <div class="col-md-6 mb-4 pb-2">
+                            <input type="text" placeholder="Días disponibles" name="díasDisponibles" id="idDíasDisponibles" class="form-control" disabled readonly/>
+                      </div>
+                      <div class="col-md-6 mb-4 pb-2">
+                            <input type="text" placeholder="Su plan vence en" name="diasVencimiento" id="idDiasVencimiento" class="form-control" disabled readonly/>
+                      </div>
                     </div>
-                  </div>
-                  <div class="row mb-4 pb-2">
-                    <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
-                      <input type="email" placeholder="Email" name="email" class="form-control" id="idEmail">
+                    <div class="row">
+                      <div class="col-md-6 mb-4 pb-2">
+                            <input type="text" placeholder="Valor cuota" name="valorCuota" id="idValorCuota" class="form-control" disabled readonly/>
+                      </div>
+                      <div class="col-md-6 mb-4 pb-2">
+                            <input type="text" placeholder="Matrícula vigente" name="matriculaVigente" id="idMatriculaVigente" class="form-control" disabled readonly/>
+                            <p class="form-text fst-italic">
+                              Deberá pagar matrícula si es su primera vez ingresando al gimnasio o si
+                              pasaron 10 días del vencimiento de su plan.
+                            </p>
+                      </div>
                     </div>
-                    <div class="col-md-6">
-                      <input type="password" placeholder="Contraseña" name="contrasenia" class="form-control" id="idContrasenia">
-                    </div>
-                  </div>
-                  <div class="mb-4 pb-2">
-                    <input type="number" placeholder="Número de celular" name="numeroDeCelular" id="idNumeroDeCelular" class="form-control" />
-                  </div>
-                  <div class="row">
-                    <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
-                      <input type="text" placeholder="Prestador de salud" name="prestadorDeSalud" id="idPrestadorDeSalud" class="form-control" />
-                    </div>
-                    <div class="col-md-6">
-                      <input type="text" placeholder="Carné de salud" name="carneDeSalud" id="idCarneDeSalud" class="form-control" />
-                    </div>
-                  </div>
-                  <div class="d-flex justify-content-start align-content-center mt-4 pt-4">
-                    <button id="botonEnviarFormularioNuevoSocio" class="btn w-auto bg-red text-white form-control">
-                      Registrarme
-                    </button>
                   </div>
                 </form>
+                <div class="row">
+                  <div class="form-check d-flex justify-content-start mt-4 px-5 pt-3">
+                    <input class="form-check-input me-3" type="checkbox" value="" id="form2Example3c"/>
+                      <label class="form-check-label" for="idTerminosYCondiciones">
+                        Acepto <a href="./terminosycondiciones.html" class="red"><u>Terminos y condiciones</u></a> del sitio.
+                      </label>
+                  </div>
+                  <div class="d-flex justify-content-between align-content-center mt-4 p-4">
+                    <button type="submit" id="botonRegistrarse" class="btn btn-lg btn-danger w-auto bg-red text-white form-control">
+                      Registrarme
+                    </button>
+                    <a href="../index.html" class="text-muted">Volver a página principal</a>
+                  </div>
+                </div>
                 <br>
                 <br>
                 <div class="row" id="divSocios">
@@ -77,90 +152,14 @@
         </div>
       </div>
     </div>
-  </div>
-</div>
-</main>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </main>
+
   <script src="../js/arrays.js"></script>
   <script src="../js/dom.js"></script>
   <script src="../js/funciones.js"></script>
   <script src="../js/objetos.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
 </body>
 </html>
-
-
-
-<!--Segunda parte del formulario
-  <div class="col-lg-6 bg-gray">
-                              <div class="p-5">
-                                <h3 class="fw-normal mb-5 fw-bold">Información de socio</h3>
-              
-                                <div class="mb-4 pb-2">
-                                  <div id="contenedorNombrePlanes" class="form-outline form-white">
-                                    <label class="form-label" for="form3Examplea2">Nombre de Plan</label>
-                                    <select class="form-select" aria-label="Default select example">
-                                      <option class="text-muted" selected>Seleccione su plan</option>
-                                      <option value="1">SMARTFUN</option>
-                                      <option value="2">SMARTCROSS</option>
-                                      <option value="3">SMARTFREE</option>
-                                      <option value="3">FREEPASS</option>
-                                    </select>
-                                  </div>
-                                </div>
-              
-                                <div class="mb-4 pb-2">
-                                  <div class="form-outline form-white">
-                                    <label class="form-label" for="form3Examplea11">Cantidad de días</label>
-                                    <select class="form-select" aria-label="Default select example">
-                                      <option class="text-muted" selected>Seleccione los días</option>
-                                      <option value="1">8</option>
-                                      <option value="2">12</option>
-                                      <option value="3">20</option>
-                                      <option value="4">31</option>
-                                    </select>
-                                    <p class="form-text">
-                                      Seleccione la cantidad de días a la semana que asistirá
-                                    </p>
-                                  </div>
-                                </div>
-              
-                                <div class="row">
-                                  <div class="col-md-6 mb-4 pb-2">
-              
-                                    <div class="form-outline form-white">
-                                        <label class="form-label" for="form3Examplea12">Días disponibles para reservar</label>
-                                        <input type="text" id="form3Examplea12" class="form-control form-control-lg" />
-                                    </div>
-              
-                                  </div>
-                                  <div class="col-md-6 mb-4 pb-2">
-              
-                                    <div class="form-outline form-white">
-                                        <label class="form-label" for="form3Examplea13">Días para el vencimiento</label>
-                                        <input type="text" id="form3Examplea13" class="form-control form-control-lg" />
-                                    </div>
-              
-                                  </div>
-                                </div>
-              
-                                <div class="form-check d-flex justify-content-start mb-4 pb-3">
-                                  <input
-                                    class="form-check-input me-3"
-                                    type="checkbox"
-                                    value=""
-                                    id="form2Example3c"
-                                  />
-                                  <label class="form-check-label" for="form2Example14">
-                                    Acepto <a href="#!" class="red"><u>Terminos y condiciones</u></a> del sitio.
-                                  </label>
-                                </div>
-              
-                                <a href="./inicio.html"><button type="submit" class="btn bg-red text-white btn-lg" data-mdb-ripple-color="dark">Registrarme</button></a>
-
-                                <div class="mt-5 text-end">
-                                    <a href="../index.html" class="text-muted">Volver a página principal</a>
-                                </div>
-              
-                              </div>
-                            </div>
--->
