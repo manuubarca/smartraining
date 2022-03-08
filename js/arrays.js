@@ -1,5 +1,5 @@
 //Declaro array de planes
-let planes = [
+const planes = [
     funOcho, funDoce, funVeinte,
     crossOcho, crossDoce, crossVeinte,
     freeOcho, freeDoce, freeVeinte,

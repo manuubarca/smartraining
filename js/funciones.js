@@ -9,7 +9,6 @@ class Plan {
     }
 }
 
-
 /*Declaro la clase Socio para los diferentes datos de interes
 del gimnasio sobre sus socios*/
 class Socio {
