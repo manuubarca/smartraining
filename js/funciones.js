@@ -1,11 +1,10 @@
 //Declaro la clase Plan para ingresar los diferentes planes que ofrece el gimnasio
 class Plan {
-    constructor(id, nombre, dias, valor, horarios) {
+    constructor(id, nombre, dias, valor) {
         this.id = id;
         this.nombre = nombre;
         this.dias = dias;
         this.valor = valor;
-        this.horarios = horarios;
     }
 }
 
@@ -24,3 +23,11 @@ class Socio {
     }
 }
 
+class clase {
+    constructor(id, nombre, cupos, horario) {
+    this.id = id;
+    this.nombre = nombre;
+    this.cupos = cupos;
+    this.horario = horario;
+    }
+}

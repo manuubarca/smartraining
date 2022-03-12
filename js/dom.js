@@ -4,6 +4,8 @@ let formSocio = document.getElementById('formSocio');
 let botonRegistrarse = document.getElementById('botonRegistrarse');
 //Hago div para almacenar los nuevos socios
 let divSocios = document.getElementById('divSocios');
+//Hago div para almacenar las clases del dia
+let divClases = document.getElementById('divClases');
 
 //Agregando eventos a elementos del DOM
 formSocio.addEventListener('submit', (e) => {
@@ -28,7 +30,7 @@ formSocio.addEventListener('submit', (e) => {
     localStorage.setItem('Socios', JSON.stringify(socios))
     //Reseteo el formulario para un nuevo ingreso
     formSocio.reset()
-})
+});
 
 
 /*Recorro mostrandolos, seria ideal que esta fuera la pagina del perfil
@@ -49,43 +51,70 @@ botonRegistrarse.addEventListener('clic', () => {
                 </h3>
                 <div class="row">
                     <div class="col-md-4 mb-4 pb-2">
-                        <p>Nombre: ${Socio.nombre}
+                        <p>
+                            Nombre: ${Socio.nombre}
+                        </p>
                     </div>
                     <div class="col-md-4 mb-4 pb-2">
-                        <p>Apellido: ${Socio.apellido}
+                        <p>
+                            Apellido: ${Socio.apellido}
+                        </p>
                     </div>
                     <div class="col-md-4 mb-4 pb-2">
                         <input type="file" id="img" name="img" accept="image/*">
                     </div>
                 </div>
                 <div class="mb-4 pb-2">
-                    <p>Apellido: ${Socio.fechaDeNacimiento}
+                    <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
+                        <p>
+                            Fecha de nacimiento: ${Socio.fechaDeNacimiento}
+                        </p>
+                    </div>
+                    <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
+                        <p>
+                            Sexo: ${Socio.sexo}
+                        </p>
+                    </div>
                 </div>
                 <div class="row mb-4 pb-2">
                     <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
-                        <p>Ciudad: ${Socio.ciudad}
+                        <p>
+                            Ciudad: ${Socio.ciudad}
+                        </p>
                     </div>
                     <div class="col-md-6">
-                        <p>Dirección: ${Socio.direccion}
+                        <p>
+                            Dirección: ${Socio.direccion}
+                        </p>
                     </div>
                 </div>
                 <div class="row mb-4 pb-2">
                     <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
-                        <p>Email: ${Socio.email}
+                        <p>
+                            Email: ${Socio.email}
+                        </p>
                     </div>
                     <div class="col-md-6">
-                        <p>Apellido: ${Socio.contrasenia}
+                        <p>
+                            Contraseña: ${Socio.contrasenia}
+                        </p>
                     </div>
                 </div>
                 <div class="mb-4 pb-2">
-                    <p>Número de celular: ${Socio.numeroDeCelular}
+                    <p>
+                        Número de celular: ${Socio.numeroDeCelular}
+                    </p>
                 </div>
                 <div class="row">
                     <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
-                        <p>Apellido: ${Socio.prestadorDeSalud}
+                        <p>
+                            Prestador de salud: ${Socio.prestadorDeSalud}
+                        </p>
                     </div>
                     <div class="col-md-6">
-                        <p>Apellido: ${Socio.carneDeSalud}
+                        <p>
+                            Carne de Salud: ${Socio.carneDeSalud}
+                        </p>
                     </div>
                 </div>
             </div>
@@ -103,4 +132,29 @@ botonRegistrarse.addEventListener('clic', () => {
             localStorage.setItem('socios', JSON.stringify(socios))
         })
     })
+});
+
+
+clases.forEach((clase, indice) => {
+    divClases.innerHTML += `
+        <div id="${indice}" class="card bg-black text-white border-0 shadow-sm my-3 mx-3 g-5">
+            <img class="card-img-top" src="../assets/img/freehorarios.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">
+                    ${clase.nombre}
+                </h5>
+                <p class="card-text">
+                    <img src="../assets/img/clock.svg" class="me-2" style="width: 25px;" alt="">
+                    ${clase.horario}
+                </p>
+                <p class="card-text">
+                    <img src="../assets/img/group.svg" class="me-2" style="width: 25px;" alt="">
+                    ${clase.cupos}
+                </p>
+                <button id="botonReservar" class="btn btn-danger bg-red">
+                    Reservar
+                </button>
+            </div>
+        </div>
+    `
 })
