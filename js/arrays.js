@@ -6,18 +6,8 @@ const planes = [
     freePass
 ];
 
-//Recorriendo el array de planes
-planes.forEach((Plan) => {
-});
-
-console.log(planes);
-
 //Declaro el array para pedirle los datos al usuario
 const socios = [];
-
-//Recorriendo el array de planes
-socios.forEach((Socio) => {
-});
 
 //Declaro el array de clases diarias
 const clases = [
@@ -26,8 +16,3 @@ const clases = [
     smartFreeOcho, smartFreeNueve, smartFreeDiecisiete, smartFreeDieciocho, smartFreeVeintiuno
 ];
 
-//Recorro el array clases
-clases.forEach((clases) => {
-});
-
-console.log(clases);
