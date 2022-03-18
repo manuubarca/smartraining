@@ -15,4 +15,3 @@ const clases = [
     smartFunOnce, smartFunDiecises, smartFunDiecinueve,
     smartFreeOcho, smartFreeNueve, smartFreeDiecisiete, smartFreeDieciocho, smartFreeVeintiuno
 ];
-

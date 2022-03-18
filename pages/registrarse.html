@@ -39,9 +39,9 @@
                       <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
                         <select name="sexo" id="idSexo" class="form-select">
                           <option value="1" selected></option>
-                          <option value="2">Mujer</option>
-                          <option value="3">Hombre</option>
-                          <option value="4">Otro</option>
+                          <option value="Mujer">Mujer</option>
+                          <option value="Hombre">Hombre</option>
+                          <option value="Otro">Otro</option>
                         </select>
                       </div>
                     </div>
@@ -83,10 +83,10 @@
                             <label class="form-label" for="idNombreDePlan">Nombre de Plan</label>
                             <select class="form-select">
                               <option selected></option>
-                              <option value="1">SMARTFUN</option>
-                              <option value="2">SMARTCROSS</option>
-                              <option value="3">SMARTFREE</option>
-                              <option value="4">FREEPASS</option>
+                              <option value="SMARTFUN">SMARTFUN</option>
+                              <option value="SMARTCROSS">SMARTCROSS</option>
+                              <option value="SMARTFREE">SMARTFREE</option>
+                              <option value="FREEPASS">FREEPASS</option>
                             </select>
                           </div>
                         </div>
@@ -126,23 +126,24 @@
                             </p>
                       </div>
                     </div>
-                    <button type="submit" class="btn btn-lg btn-danger w-auto bg-red text-white form-control">
+                    <div class="form-check d-flex justify-content-start pb-5">
+                      <input class="form-check-input me-3" type="checkbox" value="" id="form2Example3c"/>
+                        <label class="form-check-label" for="idTerminosYCondiciones">
+                          Acepto <a href="./terminosycondiciones.html" class="red"><u>Terminos y condiciones</u></a> del sitio.
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-lg btn-danger w-auto bg-red text-white form-control mb-4">
                       Registrarme
                     </button>
+                    <a href="../index.html" class="text-muted">Volver a página principal</a>
                   </div>
                 </form>
                 <div class="row">
-                  <div class="form-check d-flex justify-content-start mt-4 px-5 pt-3">
-                    <input class="form-check-input me-3" type="checkbox" value="" id="form2Example3c"/>
-                      <label class="form-check-label" for="idTerminosYCondiciones">
-                        Acepto <a href="./terminosycondiciones.html" class="red"><u>Terminos y condiciones</u></a> del sitio.
-                      </label>
-                  </div>
+                  
                   <div class="d-flex justify-content-between align-content-center mt-4 p-4">
                     <button type="submit" id="botonRegistrarse" class="btn btn-lg btn-danger w-auto bg-red text-white form-control">
                       Crear socio
                     </button>
-                    <a href="../index.html" class="text-muted">Volver a página principal</a>
                   </div>
                 </div>
                 <br>

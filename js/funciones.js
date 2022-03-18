@@ -23,7 +23,7 @@ class Socio {
     }
 }
 
-class clase {
+class Clase {
     constructor(id, nombre, cupos, horario) {
     this.id = id;
     this.nombre = nombre;

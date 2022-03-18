@@ -22,16 +22,16 @@ const freePass = new Plan(10, 'FREEPASS', 31, 1500);
 //Declaro las diferentes clases al día
 
 //Clases de cross
-const smartCrossDiez = new clase(1, 'SMARTCROSS', 12, 10);
-const smartCrossQuince = new clase(2, 'SMARTCROSS', 12, 15);
-const smartCrossVeinte = new clase(3, 'SMARTCROSS', 12, 20);
+const smartCrossDiez = new Clase(1, 'SMARTCROSS', 12, 10);
+const smartCrossQuince = new Clase(2, 'SMARTCROSS', 12, 15);
+const smartCrossVeinte = new Clase(3, 'SMARTCROSS', 12, 20);
 //CLases de funcional
-const smartFunOnce = new clase(3, 'SMARTCROSS', 12, 11);
-const smartFunDiecises = new clase(4, 'SMARTCROSS', 12, 11);
-const smartFunDiecinueve = new clase(5, 'SMARTCROSS', 12, 19);
+const smartFunOnce = new Clase(3, 'SMARTCROSS', 12, 11);
+const smartFunDiecises = new Clase(4, 'SMARTCROSS', 12, 11);
+const smartFunDiecinueve = new Clase(5, 'SMARTCROSS', 12, 19);
 //Clases de personalizado
-const smartFreeOcho = new clase(6, 'SMARTCROSS', 12, 8);
-const smartFreeNueve = new clase(7, 'SMARTCROSS', 12, 9);
-const smartFreeDiecisiete = new clase(8, 'SMARTCROSS', 12, 17);
-const smartFreeDieciocho = new clase(9, 'SMARTCROSS', 12, 18);
-const smartFreeVeintiuno = new clase(10, 'SMARTCROSS', 12, 21);
+const smartFreeOcho = new Clase(6, 'SMARTCROSS', 12, 8);
+const smartFreeNueve = new Clase(7, 'SMARTCROSS', 12, 9);
+const smartFreeDiecisiete = new Clase(8, 'SMARTCROSS', 12, 17);
+const smartFreeDieciocho = new Clase(9, 'SMARTCROSS', 12, 18);
+const smartFreeVeintiuno = new Clase(10, 'SMARTCROSS', 12, 21);

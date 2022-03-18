@@ -7,10 +7,13 @@ let divSocios = document.getElementById('divSocios');
 //Hago div para almacenar las clases del dia
 let divClases = document.getElementById('divClases');
 
+let botonReservar = document.getElementById('botonReservar');
+
 //Agregando eventos a elementos del DOM
 formSocio.addEventListener('submit', (e) => {
     //Como no tengo servidor, prevengo el comportamiento por defecto del formulario
     e.preventDefault()
+    //Declaro los labels de acuerdo al formulario HTML y les otorgo el valor
     let nombre = document.getElementById('idNombre').value
     let apellido = document.getElementById('idApellido').value
     let fechaDeNacimiento = document.getElementById('idFechaDeNacimiento').value
@@ -38,14 +41,14 @@ a modo de tarjeta de socio con una card con img etc etc.
 Tambien me gustaria en la pagina para el gimnasio mostrarlo a modo de lista*/
 
 //Creo el evento clic para el boton Registrarse del formulario de registro para los socios
-botonRegistrarse.addEventListener('clic', () => {
+botonRegistrarse.addEventListener('click', () => {
     //Reseteo los valores para no ingresar nuevos socios infinitamente
     divSocios.innerHTML = ""
 
     let tarjetaSocio = JSON.parse(localStorage.getItem('Socios'))
     
     //Creo tarjeta de usuario en el HTML a traves del DOM para cada socio
-    socios.forEach((sociosEnArray, indice, array) => {
+    tarjetaSocio.forEach((sociosEnArray, indice, array) => {
 
         divSocios.innerHTML += `
             <div id="socio${indice} class="row g-0">
@@ -165,4 +168,42 @@ clases.forEach((clasesEnArray, indice, array) => {
             </div>
         </div>
     `
+    botonReservar.addEventListener('click', () => {
+
+        const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+              confirmButton: 'btn btn-danger bg-red',
+              cancelButton: 'btn btn-outiline-info'
+            },
+            buttonsStyling: false
+          })
+          
+          swalWithBootstrapButtons.fire({
+            title: '¿Seguro que quieres reservar esta clase?',
+            text: "Recuerda que si no vas a asistir debes cancelar la reserva al menos una hora antes de la clase.",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Reservar',
+            cancelButtonText: 'Cancelar',
+            reverseButtons: true
+          }).then((result) => {
+            if (result.isConfirmed) {
+              swalWithBootstrapButtons.fire(
+                'Clase Reservada',
+                'Has reservado tu clase exitosamente, ¡te esperamos!',
+                'success'
+              )
+            } else if (
+              /* Read more about handling dismissals below */
+              result.dismiss === Swal.DismissReason.cancel
+            ) {
+              swalWithBootstrapButtons.fire(
+                'Reserva cancelada',
+                'Has cancelado tu reserva.',
+                'error'
+              )
+            }
+          })
+    }) 
 })
+
