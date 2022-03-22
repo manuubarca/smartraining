@@ -1,33 +1,13 @@
-//Declaro la clase Plan para ingresar los diferentes planes que ofrece el gimnasio
-class Plan {
-    constructor(id, nombre, dias, valor) {
-        this.id = id;
-        this.nombre = nombre;
-        this.dias = dias;
-        this.valor = valor;
+if(localStorage.getItem('Socios')) {
+    socios = JSON.parse(localStorage.getItem('Socios'))
+} else {
+    localStorage.setItem('Socios', JSON.stringify(socios))
+}
+
+/*const cuposCross = (i=1, i++, i<=12) {
+    if (botonReserva = 'clic') {
+        cuposCross = i--
     }
 }
 
-/*Declaro la clase Socio para los diferentes datos de interes
-del gimnasio sobre sus socios*/
-class Socio {
-    constructor(nombre, apellido, fechaDeNacimiento, sexo, email, contrasenia, numero, plan) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.fechaDeNacimiento = fechaDeNacimiento;
-        this.sexo = sexo;
-        this.email = email;
-        this.contrasenia = contrasenia;
-        this.numero = numero;
-        Plan = plan;
-    }
-}
-
-class Clase {
-    constructor(id, nombre, cupos, horario) {
-    this.id = id;
-    this.nombre = nombre;
-    this.cupos = cupos;
-    this.horario = horario;
-    }
-}
+console.log(cuposCross)*/

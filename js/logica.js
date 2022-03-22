@@ -1,13 +1,71 @@
+//OBJETOS
+
+//Declaro los diferentes planes que tiene el gimnasio
+
+//Entrenamiento Funcional
+const funOcho = new Plan(1, 'SMARTFUN', 8, 800);
+const funDoce = new Plan(2, 'SMARTFUN', 12, 900);
+const funVeinte = new Plan(3, 'SMARTFUN', 20, 1100);
+
+//Crosstraining
+const crossOcho = new Plan(4, 'SMARTCROSS', 8, 800);
+const crossDoce = new Plan(5, 'SMARTCROSS', 12, 900);
+const crossVeinte = new Plan(6, 'SMARTCROSS', 20, 1100);
+
+//Entrenamiento Personalizado
+const freeOcho = new Plan(7, 'SMARTFREE', 8, 1000);
+const freeDoce = new Plan(8, 'SMARTFREE', 12, 1100);
+const freeVeinte = new Plan(9, 'SMARTFREE', 20, 1200);
+
+//Pase libre
+const freePass = new Plan(10, 'FREEPASS', 31, 1500);
+
+
+//Declaro las diferentes clases al día
+
+//Clases de cross
+const smartCrossDiez = new Clase(1, 'SMARTCROSS', 12, 10);
+const smartCrossQuince = new Clase(2, 'SMARTCROSS', 12, 15);
+const smartCrossVeinte = new Clase(3, 'SMARTCROSS', 12, 20);
+//CLases de funcional
+const smartFunOnce = new Clase(3, 'SMARTCROSS', 12, 11);
+const smartFunDiecises = new Clase(4, 'SMARTCROSS', 12, 11);
+const smartFunDiecinueve = new Clase(5, 'SMARTCROSS', 12, 19);
+//Clases de personalizado
+const smartFreeOcho = new Clase(6, 'SMARTCROSS', 12, 8);
+const smartFreeNueve = new Clase(7, 'SMARTCROSS', 12, 9);
+const smartFreeDiecisiete = new Clase(8, 'SMARTCROSS', 12, 17);
+const smartFreeDieciocho = new Clase(9, 'SMARTCROSS', 12, 18);
+const smartFreeVeintiuno = new Clase(10, 'SMARTCROSS', 12, 21);
+
+
+//ARRAYS
+
+//Declaro array de planes
+const planes = [
+    funOcho, funDoce, funVeinte,
+    crossOcho, crossDoce, crossVeinte,
+    freeOcho, freeDoce, freeVeinte,
+    freePass
+];
+
+//Declaro el array para pedirle los datos al usuario
+const socios = [];
+
+//Declaro el array de clases diarias
+const clases = [
+    smartCrossDiez, smartCrossQuince, smartCrossVeinte,
+    smartFunOnce, smartFunDiecises, smartFunDiecinueve,
+    smartFreeOcho, smartFreeNueve, smartFreeDiecisiete, smartFreeDieciocho, smartFreeVeintiuno
+];
+
+
+
+
+//DOM
+
 //Hago formulario en js vinculado con los imputs del html
 let formSocio = document.getElementById('formSocio');
-//Hago que el boton registrarse del formulario guarde los datos del socio
-let botonRegistrarse = document.getElementById('botonRegistrarse');
-//Hago div para almacenar los nuevos socios
-let divSocios = document.getElementById('divSocios');
-//Hago div para almacenar las clases del dia
-let divClases = document.getElementById('divClases');
-
-let botonReservar = document.getElementById('botonReservar');
 
 //Agregando eventos a elementos del DOM
 formSocio.addEventListener('submit', (e) => {
@@ -41,6 +99,11 @@ a modo de tarjeta de socio con una card con img etc etc.
 Tambien me gustaria en la pagina para el gimnasio mostrarlo a modo de lista*/
 
 //Creo el evento clic para el boton Registrarse del formulario de registro para los socios
+//Hago que el boton registrarse del formulario guarde los datos del socio
+let botonRegistrarse = document.getElementById('botonRegistrarse');
+//Hago div para almacenar los nuevos socios
+let divSocios = document.getElementById('divSocios');
+
 botonRegistrarse.addEventListener('click', () => {
     //Reseteo los valores para no ingresar nuevos socios infinitamente
     divSocios.innerHTML = ""
@@ -131,7 +194,7 @@ botonRegistrarse.addEventListener('click', () => {
         `
     })
     //Eliminando socios
-    socios.forEach((Socio, indice) => {
+    socios.forEach((Socio, indice, array) => {
         document.getElementById(`boton${indice}`).addEventListener('click', () => {
             //De esta manera elimino elementos del DOM
             divSocios.removeChild(document.getElementById(`Socio${indice}`))
@@ -145,7 +208,11 @@ botonRegistrarse.addEventListener('click', () => {
 });
 
 
-clases.forEach((clasesEnArray, indice, array) => {
+
+//Hago div para almacenar las clases del dia
+let divClases = document.getElementById('divClases');
+
+clases.forEach((clasesEnArray, indice) => {
 
     divClases.innerHTML += `
         <div id="${indice}" class="card bg-black text-white border-0 shadow-sm my-3 mx-3 g-5">
@@ -167,43 +234,46 @@ clases.forEach((clasesEnArray, indice, array) => {
                 </button>
             </div>
         </div>
-    `
-    botonReservar.addEventListener('click', () => {
-
-        const swalWithBootstrapButtons = Swal.mixin({
-            customClass: {
-              confirmButton: 'btn btn-danger bg-red',
-              cancelButton: 'btn btn-outiline-info'
-            },
-            buttonsStyling: false
-          })
-          
-          swalWithBootstrapButtons.fire({
-            title: '¿Seguro que quieres reservar esta clase?',
-            text: "Recuerda que si no vas a asistir debes cancelar la reserva al menos una hora antes de la clase.",
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonText: 'Reservar',
-            cancelButtonText: 'Cancelar',
-            reverseButtons: true
-          }).then((result) => {
-            if (result.isConfirmed) {
-              swalWithBootstrapButtons.fire(
-                'Clase Reservada',
-                'Has reservado tu clase exitosamente, ¡te esperamos!',
-                'success'
-              )
-            } else if (
-              /* Read more about handling dismissals below */
-              result.dismiss === Swal.DismissReason.cancel
-            ) {
-              swalWithBootstrapButtons.fire(
-                'Reserva cancelada',
-                'Has cancelado tu reserva.',
-                'error'
-              )
-            }
-          })
-    }) 
+    `    
 })
 
+
+let botonReservar = document.getElementById('botonReservar');
+
+botonReservar.addEventListener("click", () => {
+
+    const swalWithBootstrapButtons = Swal.mixin({
+        customClass: {
+          confirmButton: 'btn btn-danger bg-red',
+          cancelButton: 'btn btn-outiline-info'
+        },
+        buttonsStyling: false
+      })
+      
+      swalWithBootstrapButtons.fire({
+        title: '¿Seguro que quieres reservar esta clase?',
+        text: "Recuerda que si no vas a asistir debes cancelar la reserva al menos una hora antes de la clase.",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Reservar',
+        cancelButtonText: 'Cancelar',
+        reverseButtons: true
+      }).then((result) => {
+        if (result.isConfirmed) {
+          swalWithBootstrapButtons.fire(
+            'Clase Reservada',
+            'Has reservado tu clase exitosamente, ¡te esperamos!',
+            'success'
+          )
+        } else if (
+          /* Read more about handling dismissals below */
+          result.dismiss === Swal.DismissReason.cancel
+        ) {
+          swalWithBootstrapButtons.fire(
+            'Reserva cancelada',
+            'Has cancelado tu reserva.',
+            'error'
+          )
+        }
+      })
+    }) 
