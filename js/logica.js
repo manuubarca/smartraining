@@ -28,15 +28,15 @@ const smartCrossDiez = new Clase(1, 'SMARTCROSS', 12, 10);
 const smartCrossQuince = new Clase(2, 'SMARTCROSS', 12, 15);
 const smartCrossVeinte = new Clase(3, 'SMARTCROSS', 12, 20);
 //CLases de funcional
-const smartFunOnce = new Clase(3, 'SMARTCROSS', 12, 11);
-const smartFunDiecises = new Clase(4, 'SMARTCROSS', 12, 11);
-const smartFunDiecinueve = new Clase(5, 'SMARTCROSS', 12, 19);
+const smartFunOnce = new Clase(4, 'SMARTFUN', 20, 11);
+const smartFunDiecises = new Clase(5, 'SMARTFUN', 20, 16);
+const smartFunDiecinueve = new Clase(6, 'SMARTFUN', 20, 19);
 //Clases de personalizado
-const smartFreeOcho = new Clase(6, 'SMARTCROSS', 12, 8);
-const smartFreeNueve = new Clase(7, 'SMARTCROSS', 12, 9);
-const smartFreeDiecisiete = new Clase(8, 'SMARTCROSS', 12, 17);
-const smartFreeDieciocho = new Clase(9, 'SMARTCROSS', 12, 18);
-const smartFreeVeintiuno = new Clase(10, 'SMARTCROSS', 12, 21);
+const smartFreeOcho = new Clase(7, 'SMARTFREE', 12, 8);
+const smartFreeNueve = new Clase(8, 'SMARTFREE', 12, 9);
+const smartFreeDiecisiete = new Clase(9, 'SMARTFREE', 12, 17);
+const smartFreeDieciocho = new Clase(10, 'SMARTFREE', 12, 18);
+const smartFreeVeintiuno = new Clase(11, 'SMARTFREE', 12, 21);
 
 
 //ARRAYS
@@ -54,9 +54,10 @@ const socios = [];
 
 //Declaro el array de clases diarias
 const clases = [
-    smartCrossDiez, smartCrossQuince, smartCrossVeinte,
-    smartFunOnce, smartFunDiecises, smartFunDiecinueve,
-    smartFreeOcho, smartFreeNueve, smartFreeDiecisiete, smartFreeDieciocho, smartFreeVeintiuno
+    smartFreeOcho, smartFreeNueve, smartCrossDiez,
+    smartFunOnce, smartCrossQuince, smartFunDiecises,
+    smartFreeDiecisiete, smartFreeDieciocho, smartFunDiecinueve,
+    smartCrossVeinte, smartFreeVeintiuno
 ];
 
 
@@ -68,7 +69,7 @@ const clases = [
 let formSocio = document.getElementById('formSocio');
 
 //Agregando eventos a elementos del DOM
-formSocio.addEventListener('submit', (e) => {
+formSocio?.addEventListener('submit', (e) => {
     //Como no tengo servidor, prevengo el comportamiento por defecto del formulario
     e.preventDefault()
     //Declaro los labels de acuerdo al formulario HTML y les otorgo el valor
@@ -104,7 +105,7 @@ let botonRegistrarse = document.getElementById('botonRegistrarse');
 //Hago div para almacenar los nuevos socios
 let divSocios = document.getElementById('divSocios');
 
-botonRegistrarse.addEventListener('click', () => {
+botonRegistrarse?.addEventListener('click', () => {
     //Reseteo los valores para no ingresar nuevos socios infinitamente
     divSocios.innerHTML = ""
 
@@ -213,10 +214,10 @@ botonRegistrarse.addEventListener('click', () => {
 let divClases = document.getElementById('divClases');
 
 clases.forEach((clasesEnArray, indice) => {
-
-    divClases.innerHTML += `
+    if(divClases != null ){
+        divClases.innerHTML += `
         <div id="${indice}" class="card bg-black text-white border-0 shadow-sm my-3 mx-3 g-5">
-            <img class="card-img-top" src="../assets/img/freehorarios.jpg" alt="Card image cap">
+            <img class="card-img-top" src="${clasesEnArray.img}" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">
                     ${clasesEnArray.nombre}
@@ -234,13 +235,14 @@ clases.forEach((clasesEnArray, indice) => {
                 </button>
             </div>
         </div>
-    `    
+        `
+    }
 })
 
 
 let botonReservar = document.getElementById('botonReservar');
 
-botonReservar.addEventListener("click", () => {
+botonReservar?.addEventListener("click", () => {
 
     const swalWithBootstrapButtons = Swal.mixin({
         customClass: {

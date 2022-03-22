@@ -26,6 +26,7 @@ class Socio {
 class Clase {
     constructor(id, nombre, cupos, horario) {
     this.id = id;
+    this.img = img;
     this.nombre = nombre;
     this.cupos = cupos;
     this.horario = horario;
