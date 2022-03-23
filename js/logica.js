@@ -1,68 +1,3 @@
-//OBJETOS
-
-//Declaro los diferentes planes que tiene el gimnasio
-
-//Entrenamiento Funcional
-const funOcho = new Plan(1, 'SMARTFUN', 8, 800);
-const funDoce = new Plan(2, 'SMARTFUN', 12, 900);
-const funVeinte = new Plan(3, 'SMARTFUN', 20, 1100);
-
-//Crosstraining
-const crossOcho = new Plan(4, 'SMARTCROSS', 8, 800);
-const crossDoce = new Plan(5, 'SMARTCROSS', 12, 900);
-const crossVeinte = new Plan(6, 'SMARTCROSS', 20, 1100);
-
-//Entrenamiento Personalizado
-const freeOcho = new Plan(7, 'SMARTFREE', 8, 1000);
-const freeDoce = new Plan(8, 'SMARTFREE', 12, 1100);
-const freeVeinte = new Plan(9, 'SMARTFREE', 20, 1200);
-
-//Pase libre
-const freePass = new Plan(10, 'FREEPASS', 31, 1500);
-
-
-//Declaro las diferentes clases al día
-
-//Clases de cross
-const smartCrossDiez = new Clase(1, 'SMARTCROSS', 12, 10);
-const smartCrossQuince = new Clase(2, 'SMARTCROSS', 12, 15);
-const smartCrossVeinte = new Clase(3, 'SMARTCROSS', 12, 20);
-//CLases de funcional
-const smartFunOnce = new Clase(4, 'SMARTFUN', 20, 11);
-const smartFunDiecises = new Clase(5, 'SMARTFUN', 20, 16);
-const smartFunDiecinueve = new Clase(6, 'SMARTFUN', 20, 19);
-//Clases de personalizado
-const smartFreeOcho = new Clase(7, 'SMARTFREE', 12, 8);
-const smartFreeNueve = new Clase(8, 'SMARTFREE', 12, 9);
-const smartFreeDiecisiete = new Clase(9, 'SMARTFREE', 12, 17);
-const smartFreeDieciocho = new Clase(10, 'SMARTFREE', 12, 18);
-const smartFreeVeintiuno = new Clase(11, 'SMARTFREE', 12, 21);
-
-
-//ARRAYS
-
-//Declaro array de planes
-const planes = [
-    funOcho, funDoce, funVeinte,
-    crossOcho, crossDoce, crossVeinte,
-    freeOcho, freeDoce, freeVeinte,
-    freePass
-];
-
-//Declaro el array para pedirle los datos al usuario
-const socios = [];
-
-//Declaro el array de clases diarias
-const clases = [
-    smartFreeOcho, smartFreeNueve, smartCrossDiez,
-    smartFunOnce, smartCrossQuince, smartFunDiecises,
-    smartFreeDiecisiete, smartFreeDieciocho, smartFunDiecinueve,
-    smartCrossVeinte, smartFreeVeintiuno
-];
-
-
-
-
 //DOM
 
 //Hago formulario en js vinculado con los imputs del html
@@ -195,7 +130,7 @@ botonRegistrarse?.addEventListener('click', () => {
         `
     })
     //Eliminando socios
-    socios.forEach((Socio, indice, array) => {
+    socios.forEach((Socio, indice) => {
         document.getElementById(`boton${indice}`).addEventListener('click', () => {
             //De esta manera elimino elementos del DOM
             divSocios.removeChild(document.getElementById(`Socio${indice}`))
@@ -213,69 +148,93 @@ botonRegistrarse?.addEventListener('click', () => {
 //Hago div para almacenar las clases del dia
 let divClases = document.getElementById('divClases');
 
-clases.forEach((clasesEnArray, indice) => {
-    if(divClases != null ){
-        divClases.innerHTML += `
-        <div id="${indice}" class="card bg-black text-white border-0 shadow-sm my-3 mx-3 g-5">
-            <img class="card-img-top" src="${clasesEnArray.img}" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">
-                    ${clasesEnArray.nombre}
-                </h5>
-                <p class="card-text">
-                    <img src="../assets/img/clock.svg" class="me-2" style="width: 25px;" alt="">
-                    ${clasesEnArray.horario}
-                </p>
-                <p class="card-text">
-                    <img src="../assets/img/group.svg" class="me-2" style="width: 25px;" alt="">
-                    ${clasesEnArray.cupos}
-                </p>
-                <button id="botonReservar" class="btn btn-danger bg-red">
+//Declaro las diferentes clases al día
+
+fetch('../json/clases.json')
+.then(promesa => promesa.json())
+.then(data => {
+    data.forEach((clasesEnArray, indice) => {
+        if(divClases != null ){
+            divClases.innerHTML += `
+            <div id="clase${indice}" class="card bg-black text-white border-0 shadow-sm my-3 mx-2">
+                <img class="card-img-top" src="../assets/img/${clasesEnArray.img}" alt="Card image cap">
+                <div class="card-body text-center">
+                    <h5 class="card-title pb-2 fw-bold">
+                        ${clasesEnArray.nombre}
+                    </h5>
+                    <div class="row d-flex align-items-center">
+                        <div class="col-6">
+                            <p class="card-text">
+                                <img src="../assets/img/clock.svg" class="me-2" style="width: 25px;" alt="">
+                                ${clasesEnArray.horario}
+                            </p>
+                            
+                        </div>
+                        <div class="col-6">
+                            <p class="card-text">
+                                <img src="../assets/img/group.svg" class="me-2" style="width: 25px;" alt="">
+                                ${clasesEnArray.cupos}
+                            </p>
+                        </div>
+                    </div>   
+                </div>
+                <button id="botonReservar${indice}" class="card-footer btn btn-danger bg-red">
                     Reservar
-                </button>
+                </button> 
             </div>
-        </div>
-        `
-    }
+            `
+        }
+    })
+
+    data.forEach((clasesEnArray, indice) => {
+
+        let botonReservar = document.getElementById(`botonReservar${indice}`);
+        botonReservar?.addEventListener("click", () => {
+    
+            const swalWithBootstrapButtons = Swal.mixin({
+                customClass: {
+                  confirmButton: 'btn btn-danger bg-red',
+                  cancelButton: 'btn btn-outiline-info'
+                },
+                buttonsStyling: false
+            })
+              
+            swalWithBootstrapButtons.fire({
+                title: '¿Seguro que quieres reservar esta clase?',
+                text: "Recuerda que si no vas a asistir debes cancelar la reserva al menos una hora antes de la clase.",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Reservar',
+                cancelButtonText: 'Cancelar',
+                reverseButtons: true
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    swalWithBootstrapButtons.fire(
+                    'Clase Reservada',
+                    'Has reservado tu clase exitosamente, ¡te esperamos!',
+                    'success'
+                    )
+                    /*
+                    Aca quisiera que se resten y se sumen cupos
+                    de acuerdo a el accionar de los usuarios.
+                    algo como:
+                    
+                    clasesEnArray.cupos(i=0, i++, i<=12)
+                    clasesEnArray.cupos(i=0, i--, i<=12)
+
+                    
+                    */
+                } else if (
+                    result.dismiss === Swal.DismissReason.cancel
+                ){
+                    swalWithBootstrapButtons.fire(
+                    'Reserva cancelada',
+                    'Has cancelado tu reserva.',
+                    'error'
+                    )
+                }
+            })
+        }) 
+    })
 })
 
-
-let botonReservar = document.getElementById('botonReservar');
-
-botonReservar?.addEventListener("click", () => {
-
-    const swalWithBootstrapButtons = Swal.mixin({
-        customClass: {
-          confirmButton: 'btn btn-danger bg-red',
-          cancelButton: 'btn btn-outiline-info'
-        },
-        buttonsStyling: false
-      })
-      
-      swalWithBootstrapButtons.fire({
-        title: '¿Seguro que quieres reservar esta clase?',
-        text: "Recuerda que si no vas a asistir debes cancelar la reserva al menos una hora antes de la clase.",
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonText: 'Reservar',
-        cancelButtonText: 'Cancelar',
-        reverseButtons: true
-      }).then((result) => {
-        if (result.isConfirmed) {
-          swalWithBootstrapButtons.fire(
-            'Clase Reservada',
-            'Has reservado tu clase exitosamente, ¡te esperamos!',
-            'success'
-          )
-        } else if (
-          /* Read more about handling dismissals below */
-          result.dismiss === Swal.DismissReason.cancel
-        ) {
-          swalWithBootstrapButtons.fire(
-            'Reserva cancelada',
-            'Has cancelado tu reserva.',
-            'error'
-          )
-        }
-      })
-    }) 
