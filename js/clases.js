@@ -16,9 +16,10 @@ class Plan {
 Con estos datos posteriormente pueden hacerse promociones enfocadas
 en determinados socios, o cualqueir otra cosa.*/
 class Socio {
-    constructor(nombre, apellido, fechaDeNacimiento, sexo, email, contrasenia, numero, plan) {
+    constructor(nombre, apellido, img, fechaDeNacimiento, sexo, email, contrasenia, numero, plan) {
         this.nombre = nombre;
         this.apellido = apellido;
+        this.img = img;
         this.fechaDeNacimiento = fechaDeNacimiento;
         this.sexo = sexo;
         this.email = email;

@@ -23,81 +23,121 @@ if(localStorage.getItem('Socios')) {
     tarjetaSocio.forEach((sociosEnArray, indice) => {
 
         divSocios.innerHTML += `
-            <div id="socio${indice}" class="row g-0">
-                <h3 class="fw-normal mb-5 fw-bold">
-                    Información personal
-                </h3>
-                <div class="row">
-                    <div class="col-md-4 mb-4 pb-2">
-                        <p>
-                            Nombre: ${sociosEnArray.nombre}
-                        </p>
+            <div id="socio${indice}" class="d-flex flex-column justify-content-center">
+                <div class="row px-5">
+                    <div class="row my-5">
+                        <div class="col-4 pb-2">
+                            <img href="${sociosEnArray.img}" class="img-fluid rounded-circle shadow" alt="">
+                        </div>
                     </div>
-                    <div class="col-md-4 mb-4 pb-2">
-                        <p>
-                            Apellido: ${sociosEnArray.apellido}
-                        </p>
+                    <div class="row">
+                        <div class="d-flex flex-row mb-4 pb-2 border-bottom">
+                            <p class="col-6 text-start fw-bold">
+                                Nombre:
+                            </p>
+                            <p class="col-6 text-end">
+                                ${sociosEnArray.nombre}
+                            </p>
+                        </div>
+                        <div class="d-flex flex-row mb-4 pb-2 border-bottom">
+                            <p class="col-6 text-start fw-bold">
+                                Apellido:
+                            </p>
+                            <p class="col-6 text-end">
+                                ${sociosEnArray.apellido}
+                            </p>
+                        </div>
+                        
                     </div>
-                    <div class="col-md-4 mb-4 pb-2">
-                        <input type="file" id="img" name="img" accept="image/*">
+                    <div class="row">
+                        <div class="d-flex flex-row mb-4 pb-2 border-bottom">
+                            <p class="col-6 text-start fw-bold">
+                                Fecha de nacimiento:
+                            </p>
+                            <p class="col-6 text-end">
+                                ${sociosEnArray.fechaDeNacimiento}
+                            </p>
+                        </div>
+                        <div class="d-flex flex-row mb-4 pb-2 border-bottom">
+                            <p class="col-6 text-start fw-bold">
+                                Sexo:
+                            </p>
+                            <p class="col-6 text-end">
+                                ${sociosEnArray.sexo}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="d-flex flex-row mb-4 pb-2 border-bottom">
+                            <p class="col-6 text-start fw-bold">
+                                Ciudad:
+                            </p>
+                            <p class="col-6 text-end">
+                                ${sociosEnArray.ciudad}
+                            </p>
+                        </div>
+                        <div class="d-flex flex-row mb-4 pb-2 border-bottom">
+                            <p class="col-6 text-start fw-bold">
+                                Dirección:
+                            </p>
+                            <p class="col-6 text-end">
+                                ${sociosEnArray.direccion}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row mb-4 pb-2">
+                        <div class="d-flex flex-row mb-4 pb-2 border-bottom">
+                            <p class="col-4 text-start fw-bold">
+                                Email:
+                            </p>
+                            <p class="col-8 text-end">
+                                ${sociosEnArray.email}
+                            </p>
+                        </div>
+                        <div class="d-flex flex-row mb-4 pb-2 border-bottom">
+                            <p class="col-6 text-start fw-bold">
+                                Contraseña:
+                            </p>
+                            <p class="col-6 text-end">
+                                ${sociosEnArray.contrasenia}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="d-flex flex-row mb-4 pb-2 border-bottom">
+                            <p class="col-6 text-start fw-bold">
+                                Número de celular:
+                            </p>
+                            <p class="col-6 text-end">
+                                ${sociosEnArray.numeroDeCelular}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="d-flex flex-row mb-4 pb-2 border-bottom">
+                            <p class="col-6 text-start fw-bold">
+                                Prestador de salud:
+                            </p>
+                            <p class="col-6 text-end">
+                                ${sociosEnArray.prestadorDeSalud}
+                            </p>
+                        </div>
+                        <div class="d-flex flex-row mb-4 pb-2 border-bottom">
+                            <p class="col-6 text-start fw-bold">
+                                Carne de Salud:
+                            </p>
+                            <p class="col-6 text-end">
+                                ${sociosEnArray.carneDeSalud}
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <div class="mb-4 pb-2">
-                    <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
-                        <p>
-                            Fecha de nacimiento: ${sociosEnArray.fechaDeNacimiento}
-                        </p>
-                    </div>
-                    <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
-                        <p>
-                            Sexo: ${sociosEnArray.sexo}
-                        </p>
-                    </div>
-                </div>
-                <div class="row mb-4 pb-2">
-                    <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
-                        <p>
-                            Ciudad: ${sociosEnArray.ciudad}
-                        </p>
-                    </div>
-                    <div class="col-md-6">
-                        <p>
-                            Dirección: ${sociosEnArray.direccion}
-                        </p>
-                    </div>
-                </div>
-                <div class="row mb-4 pb-2">
-                    <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
-                        <p>
-                            Email: ${sociosEnArray.email}
-                        </p>
-                    </div>
-                    <div class="col-md-6">
-                        <p>
-                            Contraseña: ${sociosEnArray.contrasenia}
-                        </p>
-                    </div>
-                </div>
-                <div class="mb-4 pb-2">
-                    <p>
-                        Número de celular: ${sociosEnArray.numeroDeCelular}
-                    </p>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
-                        <p>
-                            Prestador de salud: ${sociosEnArray.prestadorDeSalud}
-                        </p>
-                    </div>
-                    <div class="col-md-6">
-                        <p>
-                            Carne de Salud: ${sociosEnArray.carneDeSalud}
-                        </p>
-                    </div>
-                </div>
-                <div>
-                    <button id="boton${indice}" class="btn btn-lg btn-danger w-auto bg-red text-white form-control">
-                        Eliminar mi perfil
+                <div class="row justify-content-center my-4">
+                    <button id="boton${indice}" class="btn btn-lg btn-outline-dark w-auto form-control">
+                        Eliminar
+                    </button>
+                    <button id="save" class="btn btn-lg btn-danger bg-red text-white w-auto form-control mx-3">
+                        Guardar
                     </button>
                 </div>
             </div>

@@ -14,6 +14,7 @@ formSocio?.addEventListener('submit', (e) => {
     //Declaro los labels de acuerdo al formulario HTML y les otorgo el valor
     let nombre = document.getElementById('idNombre').value
     let apellido = document.getElementById('idApellido').value
+    let img = document.getElementById('idImg').value
     let fechaDeNacimiento = document.getElementById('idFechaDeNacimiento').value
     let sexo = document.getElementById('idSexo').value
     let ciudad = document.getElementById('idCiudad').value
@@ -43,8 +44,8 @@ en la pagina reserva*/
 let divClases = document.getElementById('divClases');
 
 /*Por medio de fetch y promesas creo la estructura para cada una
- de las clases que se mostraran en la pagina reserva, con sus respectivos
- nombres, cupos, y horarios*/
+de las clases que se mostraran en la pagina reserva, con sus respectivos
+nombres, cupos, y horarios*/
 fetch('../json/clases.json')
 .then(promesa => promesa.json())
 .then(data => {
@@ -90,12 +91,12 @@ fetch('../json/clases.json')
     
             const swalWithBootstrapButtons = Swal.mixin({
                 customClass: {
-                  confirmButton: 'btn btn-danger bg-red',
-                  cancelButton: 'btn btn-outiline-info'
+                    confirmButton: 'btn btn-danger bg-red',
+                    cancelButton: 'btn btn-outiline-info'
                 },
                 buttonsStyling: false
             })
-              
+            
             swalWithBootstrapButtons.fire({
                 title: '¿Seguro que quieres reservar esta clase?',
                 text: "Recuerda que si no vas a asistir debes cancelar la reserva al menos una hora antes de la clase.",
