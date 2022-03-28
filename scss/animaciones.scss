@@ -1,0 +1,10 @@
+.fotos-inicio {
+    width: 80%; height: 300px;
+    transform: scale(1,1);
+    border: 0;
+}
+
+.fotos-inicio :hover {
+    transform: scale(1.1,1.1);
+    border-style: solid;
+}

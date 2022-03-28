@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -303,8 +304,18 @@ template {
 [hidden] {
   display: none; }
 
+.fotos-inicio {
+  width: 80%;
+  height: 300px;
+  transform: scale(1, 1);
+  border: 0; }
+
+.fotos-inicio :hover {
+  transform: scale(1.1, 1.1);
+  border-style: solid; }
+
 .bienvenida {
-  background-image: url(../assets/img/DSCF4406.jpg);
+  background-image: url(../assets/img/interior-1.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -315,9 +326,13 @@ template {
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 0.5rem; }
 
-.fotos-inicio {
-  width: 80%;
-  height: 300px; }
+.quienes-somos {
+  background-image: url(../assets/img/Sin-título-1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 50vh; }
 
 .bg-red {
   background-color: #e30c18; }

@@ -1,4 +1,8 @@
-//Declaro la clase Plan para ingresar los diferentes planes que ofrece el gimnasio
+//Declaracion de clases
+
+//Clase Plan: modelo de objetos para los planes del gimnasio para que
+//en un futuro se los pueda vender por la app y que cada socio
+//tenga el suyo asignado
 class Plan {
     constructor(id, nombre, dias, valor) {
         this.id = id;
@@ -8,8 +12,9 @@ class Plan {
     }
 }
 
-/*Declaro la clase Socio para los diferentes datos de interes
-del gimnasio sobre sus socios*/
+/*Clase Socio: para los datos de interes del gimnasio sobre sus socios
+Con estos datos posteriormente pueden hacerse promociones enfocadas
+en determinados socios, o cualqueir otra cosa.*/
 class Socio {
     constructor(nombre, apellido, fechaDeNacimiento, sexo, email, contrasenia, numero, plan) {
         this.nombre = nombre;
@@ -23,6 +28,8 @@ class Socio {
     }
 }
 
+//Clase Clase: en esta clase se definen las caracteristicas de las clases
+//dictadas en el gimnasio para mostrarlas en la pagina reserva
 class Clase {
     constructor(id, img, nombre, cupos, horario) {
     this.id = id;
@@ -35,7 +42,11 @@ class Clase {
 
 //OBJETOS
 
-//Declaro los diferentes planes que tiene el gimnasio
+/*En base a la clase Plan declarada mas arriba, declaro los diferentes
+planes que tiene el gimnasio para que los socios puedan elegirlos
+mediante la app y que tambien se los pueda vincular a ellos, brindado
+beneficios en especial para algunos, o que solo puedan reservar clases
+respectivas a su plan*/
 
 //Entrenamiento Funcional
 const funOcho = new Plan(1, 'SMARTFUN', 8, 800);
@@ -60,7 +71,8 @@ const freePass = new Plan(10, 'FREEPASS', 31, 1500);
 
 //ARRAYS
 
-//Declaro array de planes
+/*Declaro array de planes con los objetos definidos arriba, de la clase
+Planes */
 const planes = [
     funOcho, funDoce, funVeinte,
     crossOcho, crossDoce, crossVeinte,
@@ -68,5 +80,8 @@ const planes = [
     freePass
 ];
 
-//Declaro el array para pedirle los datos al usuario
-const socios = [];
+
+/*En este array vacio se almacenaran los nuevos socios que completen el
+formulario de registro, llegaran a el mediante un 'socios.push'*/
+let socios = [];
+

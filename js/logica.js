@@ -1,9 +1,13 @@
 //DOM
 
-//Hago formulario en js vinculado con los imputs del html
+/*Creo la variable formSocio que funcionara como id para vincular
+el formulario de registro en el HTML, con los datos en js */
 let formSocio = document.getElementById('formSocio');
 
-//Agregando eventos a elementos del DOM
+/*Agrego el evento de tipo submit al boton del formulario de registro,
+que tomara los valores ingresados por el usuario de tipo string y les
+doy un valor en js. Ademas creo con estos valores un nuevo socio y lo
+almaceno en el array socios, en el local storage, y reseteo el formulario*/
 formSocio?.addEventListener('submit', (e) => {
     //Como no tengo servidor, prevengo el comportamiento por defecto del formulario
     e.preventDefault()
@@ -20,7 +24,10 @@ formSocio?.addEventListener('submit', (e) => {
     let prestadorDeSalud = document.getElementById('idPrestadorDeSalud').value
     let carneDeSalud = document.getElementById('idCarneDeSalud').value
     //Creo la variable para los nuevos socios
-    const socio = new Socio(nombre, apellido, fechaDeNacimiento, sexo, ciudad, direccion, email, contrasenia, numeroDeCelular, prestadorDeSalud, carneDeSalud);
+    const socio = new Socio(
+        nombre, apellido, fechaDeNacimiento, sexo,
+        ciudad, direccion, email, contrasenia, 
+        numeroDeCelular, prestadorDeSalud, carneDeSalud);
     //Guardo los nuevos socios en el array socios
     socios.push(socio)
     //Almaceno los nuevos socios en el localStorage
@@ -30,126 +37,14 @@ formSocio?.addEventListener('submit', (e) => {
 });
 
 
-/*Recorro mostrandolos, seria ideal que esta fuera la pagina del perfil
-a modo de tarjeta de socio con una card con img etc etc.
-Tambien me gustaria en la pagina para el gimnasio mostrarlo a modo de lista*/
-
-//Creo el evento clic para el boton Registrarse del formulario de registro para los socios
-//Hago que el boton registrarse del formulario guarde los datos del socio
-let botonRegistrarse = document.getElementById('botonRegistrarse');
-//Hago div para almacenar los nuevos socios
-let divSocios = document.getElementById('divSocios');
-
-botonRegistrarse?.addEventListener('click', () => {
-    //Reseteo los valores para no ingresar nuevos socios infinitamente
-    divSocios.innerHTML = ""
-
-    let tarjetaSocio = JSON.parse(localStorage.getItem('Socios'))
-    
-    //Creo tarjeta de usuario en el HTML a traves del DOM para cada socio
-    tarjetaSocio.forEach((sociosEnArray, indice, array) => {
-
-        divSocios.innerHTML += `
-            <div id="socio${indice} class="row g-0">
-                <h3 class="fw-normal mb-5 fw-bold">
-                    Información personal
-                </h3>
-                <div class="row">
-                    <div class="col-md-4 mb-4 pb-2">
-                        <p>
-                            Nombre: ${sociosEnArray.nombre}
-                        </p>
-                    </div>
-                    <div class="col-md-4 mb-4 pb-2">
-                        <p>
-                            Apellido: ${sociosEnArray.apellido}
-                        </p>
-                    </div>
-                    <div class="col-md-4 mb-4 pb-2">
-                        <input type="file" id="img" name="img" accept="image/*">
-                    </div>
-                </div>
-                <div class="mb-4 pb-2">
-                    <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
-                        <p>
-                            Fecha de nacimiento: ${sociosEnArray.fechaDeNacimiento}
-                        </p>
-                    </div>
-                    <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
-                        <p>
-                            Sexo: ${sociosEnArray.sexo}
-                        </p>
-                    </div>
-                </div>
-                <div class="row mb-4 pb-2">
-                    <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
-                        <p>
-                            Ciudad: ${sociosEnArray.ciudad}
-                        </p>
-                    </div>
-                    <div class="col-md-6">
-                        <p>
-                            Dirección: ${sociosEnArray.direccion}
-                        </p>
-                    </div>
-                </div>
-                <div class="row mb-4 pb-2">
-                    <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
-                        <p>
-                            Email: ${sociosEnArray.email}
-                        </p>
-                    </div>
-                    <div class="col-md-6">
-                        <p>
-                            Contraseña: ${sociosEnArray.contrasenia}
-                        </p>
-                    </div>
-                </div>
-                <div class="mb-4 pb-2">
-                    <p>
-                        Número de celular: ${sociosEnArray.numeroDeCelular}
-                    </p>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
-                        <p>
-                            Prestador de salud: ${sociosEnArray.prestadorDeSalud}
-                        </p>
-                    </div>
-                    <div class="col-md-6">
-                        <p>
-                            Carne de Salud: ${sociosEnArray.carneDeSalud}
-                        </p>
-                    </div>
-                </div>
-                <div>
-                    <button id="boton${indice}" class="btn btn-lg btn-danger w-auto bg-red text-white form-control">
-                    Eliminar
-                    </button>
-            </div>
-        `
-    })
-    //Eliminando socios
-    socios.forEach((Socio, indice) => {
-        document.getElementById(`boton${indice}`).addEventListener('click', () => {
-            //De esta manera elimino elementos del DOM
-            divSocios.removeChild(document.getElementById(`Socio${indice}`))
-            //De esta manera elimino elementos del array a traves del indice
-            let indiceArray = socios.findIndex(Socio => socio.nombre = socios.nombre)
-            socios.splice(indiceArray,1)
-            //De esta manera elimino elementos del localStorage
-            localStorage.setItem('socios', JSON.stringify(socios))
-        })
-    })
-});
-
-
-
-//Hago div para almacenar las clases del dia
+/*Declaro la variable para el div donde se mostraran las clases
+del gimnasio para que el socio pueda reservar la de su preferencia
+en la pagina reserva*/
 let divClases = document.getElementById('divClases');
 
-//Declaro las diferentes clases al día
-
+/*Por medio de fetch y promesas creo la estructura para cada una
+ de las clases que se mostraran en la pagina reserva, con sus respectivos
+ nombres, cupos, y horarios*/
 fetch('../json/clases.json')
 .then(promesa => promesa.json())
 .then(data => {
@@ -185,7 +80,9 @@ fetch('../json/clases.json')
             `
         }
     })
-
+    /*Agrego a las cards de cada clase un boton con un sweet alert a modo
+    de aviso para que el usuario reserve conscientemente la clase y 
+    confirme lo que hace*/
     data.forEach((clasesEnArray, indice) => {
 
         let botonReservar = document.getElementById(`botonReservar${indice}`);
