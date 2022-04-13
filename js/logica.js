@@ -35,6 +35,9 @@ formSocio?.addEventListener('submit', (e) => {
     localStorage.setItem('Socios', JSON.stringify(socios))
     //Reseteo el formulario para un nuevo ingreso
     formSocio.reset()
+    //Redirijo al usuario a la página del perfil una vez terminado el registro
+    //para que pueda serciorar sus datos y luego usar la app
+    window.location.href = '../pages/perfil.html'
 });
 
 
@@ -114,7 +117,7 @@ fetch('../json/clases.json')
                     )
                     /*
                     Aca quisiera que se resten y se sumen cupos
-                    de acuerdo a el accionar de los usuarios.
+                    de acuerdo al accionar de los usuarios.
                     algo como:
                     
                     clasesEnArray.cupos(i=0, i++, i<=12)
@@ -135,4 +138,3 @@ fetch('../json/clases.json')
         }) 
     })
 })
-
