@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestras Clases - Smartraining</title>
+    <link rel="icon" href="../assets/svg/iso_gr_sg.svg" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+<!-- Header -->
+<header class="bg-white shadow-md relative z-10">
+    <div class="container mx-auto p-4 flex justify-between items-center">
+        <div class="flex items-center">
+            <img src="../assets/svg/imago_gr_sg.svg" alt="Logo Smartraining" class="h-10 w-auto mx-4">
+        </div>
+
+        <!-- Botón del menú hamburguesa -->
+        <button id="menu-toggle" class="block md:hidden text-gray-800 focus:outline-none">
+            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+
+        <!-- Menú de navegación -->
+        <nav id="menu" class="hidden md:flex space-x-6">
+            <a href="../index.html" class="block text-gray-800 md:hover:text-red-600">Inicio</a>
+            <a href="./nuestras-clases.html" class="block text-gray-800 md:hover:text-red-600">Nuestras clases</a>
+            <a href="#" class="block text-gray-800 md:hover:text-red-600">Sobre Nosotros</a>
+            <a href="#" class="block text-gray-800 md:hover:text-red-600">App de reserva</a>
+            <a href="#" class="block text-gray-800 md:hover:text-red-600">Beneficios</a>
+            <a href="./contacto.html" class="block text-gray-800 md:hover:text-red-600">Contacto</a>
+        </nav>
+    </div>
+
+    <!-- Menú para dispositivos móviles -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+        <nav class="px-4 pt-2 pb-4 space-y-2">
+            <a href="../index.html" class="block text-gray-800 md:hover:text-red-600">Inicio</a>
+            <a href="./nuestras-clases.html" class="block text-gray-800 md:hover:text-red-600">Nuestras clases</a>
+            <a href="#" class="block text-gray-800 md:hover:text-red-600">Sobre Nosotros</a>
+            <a href="#" class="block text-gray-800 md:hover:text-red-600">App de reserva</a>
+            <a href="#" class="block text-gray-800 md:hover:text-red-600">Beneficios</a>
+            <a href="./contacto.html" class="block text-gray-800 md:hover:text-red-600">Contacto</a>
+        </nav>
+    </div>
+</header>
+
+<!-- Main Content sin formato de tarjeta -->
+<main class="">
+
+<!-- Sección Hero con Galería en Grid -->
+<section id="intro-clases" class="relative pt-16 md:px-16 bg-white z-0">
+    <div class="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between h-screen relative z-10">
+
+        <!-- Columna de Galería de Imágenes en Grid Rotado (Visible solo en desktop) -->
+        <div class="hidden md:block md:w-6/12 absolute -right-20 rotate-12">
+            <div class="grid grid-cols-3 grid-rows-3 gap-4">
+                <img src="../assets/img/cross.jpg" alt="Entrenamiento" class="w-32 md:w-48 rounded-md">
+                <img src="../assets/img/cross.jpg" alt="Pilates" class="w-32 md:w-48 rounded-md">
+                <img src="../assets/img/cross.jpg" alt="Funcional" class="w-32 md:w-48 rounded-md">
+                <img src="../assets/img/cross.jpg" alt="Sala de Aparatos" class="w-32 md:w-48 rounded-md">
+                <img src="../assets/img/cross.jpg" alt="Otra Clase" class="w-32 md:w-48 rounded-md">
+                <img src="../assets/img/cross.jpg" alt="Clase 6" class="w-32 md:w-48 rounded-md">
+                <img src="../assets/img/cross.jpg" alt="Clase 7" class="w-32 md:w-48 rounded-md">
+                <img src="../assets/img/cross.jpg" alt="Clase 8" class="w-32 md:w-48 rounded-md">
+                <img src="../assets/img/cross.jpg" alt="Clase 9" class="w-32 md:w-48 rounded-md">
+                <img src="../assets/img/cross.jpg" alt="Entrenamiento" class="w-32 md:w-48 rounded-md">
+                <img src="../assets/img/cross.jpg" alt="Pilates" class="w-32 md:w-48 rounded-md">
+                <img src="../assets/img/cross.jpg" alt="Funcional" class="w-32 md:w-48 rounded-md">
+                <img src="../assets/img/cross.jpg" alt="Sala de Aparatos" class="w-32 md:w-48 rounded-md">
+                <img src="../assets/img/cross.jpg" alt="Otra Clase" class="w-32 md:w-48 rounded-md">
+                <img src="../assets/img/cross.jpg" alt="Clase 6" class="w-32 md:w-48 rounded-md">
+                <img src="../assets/img/cross.jpg" alt="Clase 7" class="w-32 md:w-48 rounded-md">
+                <img src="../assets/img/cross.jpg" alt="Clase 8" class="w-32 md:w-48 rounded-md">
+                <img src="../assets/img/cross.jpg" alt="Clase 9" class="w-32 md:w-48 rounded-md">
+                <img src="../assets/img/cross.jpg" alt="Clase 7" class="w-32 md:w-48 rounded-md">
+                <img src="../assets/img/cross.jpg" alt="Clase 8" class="w-32 md:w-48 rounded-md">
+                <img src="../assets/img/cross.jpg" alt="Clase 9" class="w-32 md:w-48 rounded-md">
+            </div>
+        </div>
+
+        <!-- Columna de Texto -->
+        <div class="md:w-6/12 text-center md:text-left relative z-10 px-6 md:px-0 md:my-24 mt-96 py-12 bg-white">
+            <h1 class="text-4xl md:text-6xl font-extrabold italic uppercase mb-6">Tenemos eso que estas buscando</h1>
+            <p class="text-lg md:text-xl text-gray-600 mb-6">
+                En Smartraining ofrecemos una variedad de clases que se ajustan a tus necesidades. Descubre nuestros entrenamientos y lleva tu salud al siguiente nivel.
+            </p>
+            <div class="space-x-4">
+                <a href="#services" class="inline-block px-6 py-3 bg-gradient-to-r from-red-600 to-orange-600 text-white rounded-full shadow-lg hover:bg-red-700 transition duration-300">Comienza hoy</a>
+                <a href="#" class="inline-block px-6 py-3 border border-red-600 text-red-600 font-bold rounded-full shadow-lg hover:bg-red-600 hover:text-white transition duration-300">Ver clases</a>
+            </div>
+        </div>
+
+        <!-- Columna de Galería de Imágenes en Grid Rotado (Visible solo en móviles) -->
+        <div class="md:hidden grid grid-cols-3 grid-rows-3 gap-4 mt-8 absolute -right-32 bottom-6 rotate-12">
+            <img src="../assets/img/cross.jpg" alt="Entrenamiento" class="w-full rounded-md">
+            <img src="../assets/img/cross.jpg" alt="Pilates" class="w-full rounded-md">
+            <img src="../assets/img/cross.jpg" alt="Funcional" class="w-full rounded-md">
+            <img src="../assets/img/cross.jpg" alt="Sala de Aparatos" class="w-full rounded-md">
+            <img src="../assets/img/cross.jpg" alt="Otra Clase" class="w-full rounded-md">
+            <img src="../assets/img/cross.jpg" alt="Clase 6" class="w-full rounded-md">
+            <img src="../assets/img/cross.jpg" alt="Otra Clase" class="w-full rounded-md">
+            <img src="../assets/img/cross.jpg" alt="Clase 6" class="w-full rounded-md">
+            <img src="../assets/img/cross.jpg" alt="Otra Clase" class="w-full rounded-md">            
+            <img src="../assets/img/cross.jpg" alt="Entrenamiento" class="w-full rounded-md">
+            <img src="../assets/img/cross.jpg" alt="Pilates" class="w-full rounded-md">
+            <img src="../assets/img/cross.jpg" alt="Funcional" class="w-full rounded-md">
+            <img src="../assets/img/cross.jpg" alt="Sala de Aparatos" class="w-full rounded-md">
+            <img src="../assets/img/cross.jpg" alt="Otra Clase" class="w-full rounded-md">
+            <img src="../assets/img/cross.jpg" alt="Clase 6" class="w-full rounded-md">
+            <img src="../assets/img/cross.jpg" alt="Otra Clase" class="w-full rounded-md">
+            <img src="../assets/img/cross.jpg" alt="Clase 6" class="w-full rounded-md">
+            <img src="../assets/img/cross.jpg" alt="Otra Clase" class="w-full rounded-md">     
+            <img src="../assets/img/cross.jpg" alt="Otra Clase" class="w-full rounded-md">
+            <img src="../assets/img/cross.jpg" alt="Clase 6" class="w-full rounded-md">
+            <img src="../assets/img/cross.jpg" alt="Otra Clase" class="w-full rounded-md">   
+        </div>
+    </div>
+</section>
+
+
+    <div class="mx-auto relative z-10">
+
+    <!-- Smartcross Section -->
+<section id="smartcross" class="bg-gray-100">
+    <div class="mx-auto flex flex-col md:flex-row items-center justify-between">
+        <!-- Columna de Texto -->
+        <div class="md:w-6/12 md:px-16 px-6 md:mt-0 mt-8">
+            <!-- Badge o etiqueta pequeña (sin relleno) -->
+            <div class="flex items-center space-x-2 mb-4">
+                <span class="px-3 py-1 border border-gray-600 text-gray-600 rounded-full text-sm font-semibold">Alta Intensidad</span>
+                <span class="px-3 py-1 border border-gray-600 text-gray-600 rounded-full text-sm font-semibold">Sin sesgo de género</span>
+            </div>
+
+            <!-- Título grande -->
+            <h2 class="text-5xl font-extrabold italic uppercase text-red-600 leading-tight mb-4">Smartcross</h2>
+            <!-- Descripción larga -->
+            <p class="text-xl text-black mb-6">
+                Smartcross es una actividad grupal que combina disciplinas como levantamiento olímpico, movimientos gimnásticos y ejercicios metabólicos de alta intensidad.
+            </p>
+
+            <!-- Lista con detalles adicionales -->
+            <ul class="text-lg text-black mb-6 space-y-2">
+                <li><strong>Horarios:</strong> Tres turnos diarios.</li>
+                <li><strong>Capacidad:</strong> Grupos de hasta 16 personas.</li>
+                <li><strong>Inclusividad:</strong> Sin sesgo de género ni edad, todos son bienvenidos.</li>
+                <li><strong>Adaptación:</strong> Ejercicios modificables para cada capacidad física o lesiones.</li>
+            </ul>
+
+            <!-- Botones de llamada a la acción -->
+            <div class="space-x-4 flex">
+                <a href="#" class="px-6 py-3 bg-gradient-to-r from-red-600 to-orange-600 text-white font-bold rounded-full shadow-lg md:hover:from-red-700 md:hover:to-orange-700 transition duration-300">Prueba una clase gratuita</a>
+                <a href="#" class="px-6 py-3 border border-red-600 text-red-600 font-bold rounded-full shadow-lg md:hover:bg-red-600 md:hover:text-white transition duration-300">Más información</a>
+            </div>
+        </div>
+
+        <!-- Columna de Imagen -->
+        <div class="md:w-5/12 mt-8 md:mt-0">
+            <img src="../assets/img/cross.jpg" alt="Smartcross" class="w-full h-auto object-cover shadow-lg">
+        </div>
+    </div>
+</section>
+
+<!-- Smartfun Section (Alternado) -->
+<section id="smartfun" class="bg-white">
+    <div class="mx-auto flex flex-col md:flex-row-reverse items-center justify-between"> <!-- Cambiado a 'md:flex-row-reverse' -->
+        <!-- Columna de Texto -->
+        <div class="md:w-6/12 md:px-16 px-6 md:mt-0 mt-8">
+            <!-- Badge o etiqueta pequeña (sin relleno) -->
+            <div class="flex items-center space-x-2 mb-4">
+                <span class="px-3 py-1 border border-gray-600 text-gray-600 rounded-full text-sm font-semibold">Funcional</span>
+                <span class="px-3 py-1 border border-gray-600 text-gray-600 rounded-full text-sm font-semibold">Adaptado a todos los niveles</span>
+            </div>
+
+            <!-- Título grande -->
+            <h2 class="text-5xl font-extrabold italic uppercase text-orange-600 leading-tight mb-4">Smartfun</h2>
+            <!-- Descripción larga -->
+            <p class="text-xl text-black mb-6">
+                Smartfun es un entrenamiento funcional diseñado para mejorar tu rendimiento físico en el día a día y en actividades deportivas.
+            </p>
+
+            <!-- Lista con detalles adicionales -->
+            <ul class="text-lg text-black mb-6 space-y-2">
+                <li><strong>Horarios:</strong> Tres turnos diarios.</li>
+                <li><strong>Capacidad:</strong> Grupos de hasta 20 personas.</li>
+                <li><strong>Inclusividad:</strong> Sin restricciones de género ni edad.</li>
+                <li><strong>Adaptación:</strong> Los ejercicios se ajustan a cada nivel físico.</li>
+            </ul>
+
+            <!-- Botones de llamada a la acción -->
+            <div class="space-x-4 flex">
+                <a href="#" class="px-6 py-3 bg-gradient-to-r from-orange-600 to-red-600 text-white font-bold rounded-full shadow-lg md:hover:from-orange-700 md:hover:to-red-700 transition duration-300">Prueba una clase gratuita</a>
+                <a href="#" class="px-6 py-3 border border-orange-600 text-orange-600 font-bold rounded-full shadow-lg md:hover:bg-orange-600 md:hover:text-white transition duration-300">Más información</a>
+            </div>
+        </div>
+
+        <!-- Columna de Imagen -->
+        <div class="md:w-5/12 mt-8 md:mt-0">
+            <img src="../assets/img/funcional.jpg" alt="Smartfun" class="w-full h-auto object-cover shadow-lg">
+        </div>
+    </div>
+</section>
+
+<!-- Smartfree Section -->
+<section id="smartfree" class="bg-gray-100">
+    <div class="mx-auto flex flex-col md:flex-row items-center justify-between">
+        <!-- Columna de Texto -->
+        <div class="md:w-6/12 md:px-16 px-6 md:mt-0 mt-8">
+            <!-- Badge o etiqueta pequeña (sin relleno) -->
+            <div class="flex items-center space-x-2 mb-4">
+                <span class="px-3 py-1 border border-gray-600 text-gray-600 rounded-full text-sm font-semibold">Entrenamiento Personalizado</span>
+                <span class="px-3 py-1 border border-gray-600 text-gray-600 rounded-full text-sm font-semibold">A tu ritmo</span>
+            </div>
+
+            <!-- Título grande -->
+            <h2 class="text-5xl font-extrabold italic uppercase text-red-600 leading-tight mb-4">Smartfree</h2>
+            <!-- Descripción larga -->
+            <p class="text-xl text-black mb-6">
+                Smartfree te permite entrenar a tu propio ritmo con la supervisión de un coach, quien personalizará un plan de entrenamiento que se ajuste a tus objetivos.
+            </p>
+
+            <!-- Lista con detalles adicionales -->
+            <ul class="text-lg text-black mb-6 space-y-2">
+                <li><strong>Horarios:</strong> Cinco turnos diarios.</li>
+                <li><strong>Capacidad:</strong> Grupos de hasta 16 personas.</li>
+                <li><strong>Inclusividad:</strong> Abierto a todos, sin importar género ni edad.</li>
+                <li><strong>Adaptación:</strong> Planes ajustados a las capacidades físicas de cada participante.</li>
+            </ul>
+
+            <!-- Botones de llamada a la acción -->
+            <div class="space-x-4 flex">
+                <a href="#" class="px-6 py-3 bg-gradient-to-r from-red-600 to-orange-600 text-white font-bold rounded-full shadow-lg md:hover:from-red-700 md:hover:to-orange-700 transition duration-300">Prueba una clase gratuita</a>
+                <a href="#" class="px-6 py-3 border border-red-600 text-red-600 font-bold rounded-full shadow-lg md:hover:bg-red-600 md:hover:text-white transition duration-300">Más información</a>
+            </div>
+        </div>
+
+        <!-- Columna de Imagen -->
+        <div class="md:w-5/12 mt-8 md:mt-0">
+            <img src="../assets/img/sala.jpg" alt="Smartfree" class="w-full h-auto object-cover shadow-lg">
+        </div>
+    </div>
+</section>
+
+<!-- Entrenamiento Online Section (Alternado) -->
+<section id="entrenamiento-online" class="bg-white">
+    <div class="mx-auto flex flex-col md:flex-row-reverse items-center justify-between"> <!-- Cambiado a 'md:flex-row-reverse' -->
+        <!-- Columna de Texto -->
+        <div class="md:w-6/12 md:px-16 px-6 md:mt-0 mt-8">
+            <!-- Badge o etiqueta pequeña (sin relleno) -->
+            <div class="flex items-center space-x-2 mb-4">
+                <span class="px-3 py-1 border border-gray-600 text-gray-600 rounded-full text-sm font-semibold">Personalizado</span>
+                <span class="px-3 py-1 border border-gray-600 text-gray-600 rounded-full text-sm font-semibold">100% Online</span>
+            </div>
+
+            <!-- Título grande -->
+            <h2 class="text-5xl font-extrabold italic uppercase text-orange-600 leading-tight mb-4">Entrenamiento Online</h2>
+            <!-- Descripción larga -->
+            <p class="text-xl text-black mb-6">
+                Con el entrenamiento online, puedes acceder a planes de entrenamiento personalizados desde cualquier lugar y seguir tu progreso con la supervisión de nuestros coaches a través de la app.
+            </p>
+
+            <!-- Lista con detalles adicionales -->
+            <ul class="text-lg text-black mb-6 space-y-2">
+                <li><strong>Horarios:</strong> Planes flexibles, disponibles todo el día.</li>
+                <li><strong>Capacidad:</strong> Ilimitado, entrenamiento en casa.</li>
+                <li><strong>Inclusividad:</strong> Para todos los niveles y géneros.</li>
+                <li><strong>Adaptación:</strong> Planes ajustados a tus objetivos y capacidades.</li>
+            </ul>
+
+            <!-- Botones de llamada a la acción -->
+            <div class="space-x-4 flex">
+                <a href="#" class="px-6 py-3 bg-gradient-to-r from-orange-600 to-red-600 text-white font-bold rounded-full shadow-lg md:hover:from-orange-700 md:hover:to-red-700 transition duration-300">Prueba una clase gratuita</a>
+                <a href="#" class="px-6 py-3 border border-orange-600 text-orange-600 font-bold rounded-full shadow-lg md:hover:bg-orange-600 md:hover:text-white transition duration-300">Más información</a>
+            </div>
+        </div>
+
+        <!-- Columna de Imagen -->
+        <div class="md:w-5/12 mt-8 md:mt-0">
+            <img src="../assets/img/online.jpg" alt="Entrenamiento Online" class="w-full h-auto object-cover shadow-lg">
+        </div>
+    </div>
+</section>
+
+<!-- Sección de Pilates -->
+<section id="pilates" class="bg-white">
+    <div class="mx-auto flex flex-col md:flex-row items-center justify-between">
+        <!-- Columna de Texto -->
+        <div class="md:w-6/12 md:px-16 px-6 md:mt-0 mt-8">
+            <!-- Badge o etiqueta pequeña -->
+            <div class="flex items-center space-x-2 mb-4">
+                <span class="px-3 py-1 border border-gray-600 text-gray-700 rounded-full text-sm font-semibold">Bajo Impacto</span>
+                <span class="px-3 py-1 border border-gray-600 text-gray-700 rounded-full text-sm font-semibold">Mejora tu flexibilidad</span>
+            </div>
+            
+            <!-- Título grande -->
+            <h2 class="text-5xl font-extrabold italic uppercase text-red-600 leading-tight mb-4">Pilates</h2>
+            <!-- Descripción larga -->
+            <p class="text-xl text-black mb-6">
+                Las clases de Pilates están diseñadas para fortalecer el cuerpo de manera equilibrada, mejorar la postura y aumentar la flexibilidad. 
+                Cada sesión es adaptable a cualquier nivel físico, lo que la convierte en una opción ideal para todos.
+            </p>
+            
+            <!-- Lista con detalles adicionales -->
+            <ul class="text-lg text-black mb-6 list-disc pl-5 space-y-2">
+                <li><strong>Horarios:</strong> Tres turnos diarios.</li>
+                <li><strong>Capacidad:</strong> Grupos de hasta 10 personas.</li>
+                <li><strong>Inclusividad:</strong> Sin sesgo de género ni edad, todos son bienvenidos.</li>
+                <li><strong>Adaptación:</strong> Ejercicios modificables para cada capacidad física o lesiones.</li>
+            </ul>
+
+            <!-- Botones de llamada a la acción -->
+            <div class="space-x-4 flex">
+                <a href="#" class="px-6 py-3 bg-gradient-to-r from-red-600 to-orange-600 text-white font-bold rounded-full shadow-lg md:hover:from-red-700 md:hover:to-orange-700 transition duration-300">Prueba una clase gratuita</a>
+                <a href="#" class="px-6 py-3 border border-red-600 text-red-600 font-bold rounded-full shadow-lg md:hover:bg-red-600 md:hover:text-white transition duration-300">Más información</a>
+            </div>
+        </div>
+
+        <!-- Columna de Imagen -->
+        <div class="md:w-5/12 mt-8 md:mt-0">
+            <img src="../assets/img/pilates.jpg" alt="Pilates" class="w-full h-auto object-cover shadow-lg">
+        </div>
+    </div>
+</section>
+
+<!-- Sección de Pase Libre -->
+<section id="pase-libre" class="bg-gray-100 ">
+    <div class="mx-auto flex flex-col md:flex-row-reverse items-center justify-between">
+        <!-- Columna de Texto -->
+        <div class="md:w-6/12 md:px-16 px-6 md:mt-0 mt-8">
+            <!-- Badge o etiqueta pequeña -->
+            <div class="flex items-center space-x-2 mb-4">
+                <span class="px-3 py-1 border border-gray-600 text-gray-700 rounded-full text-sm font-semibold">Acceso Completo</span>
+                <span class="px-3 py-1 border border-gray-600 text-gray-700 rounded-full text-sm font-semibold">Horarios Flexibles</span>
+            </div>
+            
+            <!-- Título grande -->
+            <h2 class="text-5xl font-extrabold italic uppercase text-red-600 leading-tight mb-4">Pase Libre</h2>
+            <!-- Descripción larga -->
+            <p class="text-xl text-black mb-6">
+                El Pase Libre te ofrece acceso ilimitado a todas nuestras clases y actividades, permitiéndote entrenar en cualquier horario disponible. 
+                Es perfecto para quienes buscan flexibilidad y aprovechar al máximo todas nuestras instalaciones.
+            </p>
+            
+            <!-- Lista con detalles adicionales -->
+            <ul class="text-lg text-black mb-6 list-disc pl-5 space-y-2">
+                <li><strong>Acceso:</strong> Ilimitado a todas las clases y servicios.</li>
+                <li><strong>Horarios:</strong> Flexibles según la programación diaria.</li>
+                <li><strong>Beneficios:</strong> Incluye acceso a eventos especiales y promociones.</li>
+                <li><strong>Adaptación:</strong> Perfecto para quienes buscan flexibilidad en sus entrenamientos.</li>
+            </ul>
+
+            <!-- Botones de llamada a la acción -->
+            <div class="space-x-4 flex">
+                <a href="#" class="px-6 py-3 bg-gradient-to-r from-red-600 to-orange-600 text-white font-bold rounded-full shadow-lg md:hover:from-red-700 md:hover:to-orange-700 transition duration-300">Obtén tu pase libre</a>
+                <a href="#" class="px-6 py-3 border border-red-600 text-red-600 font-bold rounded-full shadow-lg md:hover:bg-red-600 md:hover:text-white transition duration-300">Más información</a>
+            </div>
+        </div>
+
+        <!-- Columna de Imagen -->
+        <div class="md:w-5/12 mt-8 md:mt-0">
+            <img src="../assets/img/pase libre.jpg" alt="Pase Libre" class="w-full h-auto object-cover shadow-lg">
+        </div>
+    </div>
+</section>
+
+
+
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-black text-white py-8">
+    <div class="container mx-auto text-center">
+        <p>&copy; 2024 Smartraining. Todos los derechos reservados.</p>
+        <div class="mt-4">
+            <a href="https://www.facebook.com/Smartraining.uy" class="text-gray-400 md:hover:text-white mx-2">Facebook</a>
+            <a href="https://www.instagram.com/smartraining.uy/" class="text-gray-400 md:hover:text-white mx-2">Instagram</a>
+        </div>
+    </div>
+</footer>
+
+<!-- Enlace al archivo de JavaScript -->
+<script src="../js/logica.js"></script>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+</body>
+</html>
