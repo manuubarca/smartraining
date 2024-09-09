@@ -1,10 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quienes somos</title>
+    <title>Sobre Nosotros - Smartraining</title>
+    <link rel="icon" href="../assets/svg/iso_gr_sg.svg" type="image/png">
+    <link rel="stylesheet" href="../css/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
-    
+
+    <!-- Header -->
+    <header class="bg-white shadow-md relative z-10">
+        <div class="container mx-auto p-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="../index.html" class="block text-black md:hover:text-red-600">
+                    <img src="../assets/svg/imago_gr_sg.svg" alt="Logo Smartraining" class="h-10 w-auto mx-4">
+                </a>
+            </div>
+
+            <!-- Botón del menú hamburguesa -->
+            <button id="menu-toggle" class="block md:hidden text-black focus:outline-none">
+                <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+
+            <!-- Menú de navegación -->
+            <nav id="menu" class="hidden md:flex space-x-6">
+                <a href="../index.html" class="block text-black md:hover:text-red-600">Inicio</a>
+                <a href="../pages/nuestras-clases.html" class="block text-black md:hover:text-red-600">Nuestras clases</a>
+                <a href="../pages/sobre-nosotros.html" class="block text-black md:hover:text-red-600">Sobre Nosotros</a>
+                <a href="../pages/app-de-reserva.html" class="block text-black md:hover:text-red-600">App de reserva</a>
+                <a href="../pages/beneficios.html" class="block text-black md:hover:text-red-600">Beneficios</a>
+                <a href="../pages/contacto.html" class="block text-black md:hover:text-red-600">Contacto</a>
+            </nav>
+        </div>
+
+        <!-- Menú para dispositivos móviles -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-lg text-center">
+            <nav class="px-4 pt-4 pb-4 space-y-4">
+                <a href="../index.html" class="block text-black md:hover:text-red-600">Inicio</a>
+                <a href="../pages/nuestras-clases.html" class="block text-black md:hover:text-red-600">Nuestras clases</a>
+                <a href="../pages/sobre-nosotros.html" class="block text-black md:hover:text-red-600">Sobre Nosotros</a>
+                <a href="../pages/app-de-reserva.html" class="block text-black md:hover:text-red-600">App de reserva</a>
+                <a href="../pages/beneficios.html" class="block text-black md:hover:text-red-600">Beneficios</a>
+                <a href="../pages/contacto.html" class="block text-black md:hover:text-red-600">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección Hero con Imagen de Fondo -->
+    <section id="sobre-nosotros-hero" class="relative py-20 bg-cover bg-center fade-in" style="background-image: url('../assets/img/smt-2.jpg');">
+        <div class="absolute inset-0 bg-black opacity-60"></div>
+        <div class="container mx-auto relative z-10 text-center md:text-left text-white">
+            <h1 class="text-5xl md:text-6xl font-extrabold italic uppercase mb-6 fade-in visible">Sobre Nosotros</h1>
+            <p class="text-lg md:text-xl mb-6 fade-in visible">En Smartraining ofrecemos una experiencia de entrenamiento única, combinando lo físico y lo mental. Conoce nuestra historia y lo que nos hace diferentes.</p>
+            <a href="#equipo" class="inline-block px-6 py-3 bg-gradient-to-r from-red-600 to-orange-600 text-white rounded-full shadow-lg hover:scale-105 transition duration-300">Conoce a nuestro equipo</a>
+        </div>
+    </section>
+
+    <!-- Sección Nuestra Historia -->
+    <section id="our-story" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="md:flex items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <h2 class="text-4xl font-extrabold italic uppercase text-gray-900 mb-6 fade-in">Nuestra Historia</h2>
+                    <p class="text-lg text-gray-700 mb-4 fade-in">
+                        Smartraining abrió en 2020, enfrentándose al reto de la pandemia. Adaptamos nuestras clases para entrenar por Zoom, manteniendo a nuestros socios activos y motivados desde casa.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-4 fade-in">
+                        Nuestras primeras clases eran limitadas a 4 personas, pero ahora hemos crecido y podemos recibir hasta 16 por turno, manteniendo siempre el enfoque personalizado.
+                    </p>
+                </div>
+                <div class="md:w-1/2 md:pl-8 fade-in">
+                    <img src="../assets/img/viejo-gim.jpg" alt="Historia de Smartraining" class="h-auto w-2/3 rounded-lg shadow-lg mx-auto md:mx-0">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Crecimiento y Expansión con diseño alternado -->
+    <section id="growth" class="py-16 bg-white">
+        <div class="container mx-auto px-6 md:flex items-center">
+            <div class="md:w-1/2 fade-in">
+                <img src="../assets/img/growth.jpg" alt="Crecimiento Smartraining" class="w-full h-auto object-cover rounded-lg shadow-lg">
+            </div>
+            <div class="md:w-1/2 md:pl-8">
+                <h2 class="text-4xl font-extrabold italic uppercase text-gray-900 mb-6 fade-in">Crecimiento y Expansión</h2>
+                <p class="text-lg text-gray-700 mb-6 fade-in">
+                    Esta es la segunda vez que mudamos nuestras instalaciones, ampliando para brindar más espacio y mejores oportunidades para entrenar, manteniendo nuestro compromiso de calidad.
+                </p>
+                <p class="text-lg text-gray-700 fade-in">
+                    Con cada mudanza, hemos ampliado nuestros servicios, asegurando que todos los socios reciban atención personalizada y un entrenamiento adaptado a sus necesidades.
+                </p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+    <!-- Footer -->
+<footer class="bg-black text-white py-8">
+    <div class="container mx-auto text-center">
+        <p>&copy; 2024 Smartraining. Todos los derechos reservados.</p>
+        <div class="mt-4">
+            <a href="https://www.facebook.com/Smartraining.uy" class="text-gray-400 md:hover:text-white mx-2">Facebook</a>
+            <a href="https://www.instagram.com/smartraining.uy/" class="text-gray-400 md:hover:text-white mx-2">Instagram</a>
+        </div>
+    </div>
+</footer>
+
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- Enlace al archivo de JavaScript -->
+        <script src="../js/logica.js"></script>
+
 </body>
+</html>

@@ -1,10 +1,179 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actividades y espacio</title>
+    <title>Reserva tus clases - Smartraining</title>
+    <link rel="icon" href="../assets/svg/iso_gr_sg.svg" type="image/png">
+    <link rel="stylesheet" href="../css/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body>
+<body class="">
+
+        <!-- Header -->
+        <header class="bg-white shadow-md relative z-10">
+            <div class="container mx-auto p-4 flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="../index.html" class="block text-black md:hover:text-red-600">
+                        <img src="../assets/svg/imago_gr_sg.svg" alt="Logo Smartraining" class="h-10 w-auto mx-4">
+                    </a>
+                </div>
     
+                <!-- Botón del menú hamburguesa -->
+                <button id="menu-toggle" class="block md:hidden text-black focus:outline-none">
+                    <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+    
+                <!-- Menú de navegación -->
+                <nav id="menu" class="hidden md:flex space-x-6">
+                    <a href="../index.html" class="block text-black md:hover:text-red-600">Inicio</a>
+                    <a href="../pages/nuestras-clases.html" class="block text-black md:hover:text-red-600">Nuestras clases</a>
+                    <a href="../pages/sobre-nosotros.html" class="block text-black md:hover:text-red-600">Sobre Nosotros</a>
+                    <a href="../pages/app-de-reserva.html" class="block text-black md:hover:text-red-600">App de reserva</a>
+                    <a href="../pages/beneficios.html" class="block text-black md:hover:text-red-600">Beneficios</a>
+                    <a href="../pages/contacto.html" class="block text-black md:hover:text-red-600">Contacto</a>
+                </nav>
+            </div>
+    
+            <!-- Menú para dispositivos móviles -->
+            <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-lg text-center">
+                <nav class="px-4 pt-4 pb-4 space-y-4">
+                    <a href="../index.html" class="block text-black md:hover:text-red-600">Inicio</a>
+                    <a href="../pages/nuestras-clases.html" class="block text-black md:hover:text-red-600">Nuestras clases</a>
+                    <a href="../pages/sobre-nosotros.html" class="block text-black md:hover:text-red-600">Sobre Nosotros</a>
+                    <a href="../pages/app-de-reserva.html" class="block text-black md:hover:text-red-600">App de reserva</a>
+                    <a href="../pages/beneficios.html" class="block text-black md:hover:text-red-600">Beneficios</a>
+                    <a href="../pages/contacto.html" class="block text-black md:hover:text-red-600">Contacto</a>
+                </nav>
+            </div>
+        </header>
+
+        <section class="bg-red-600 text-white py-16 px-12">
+            <div class="flex flex-col md:flex-row items-center justify-center mx-auto">
+                <div class="md:w-6/12">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Reserva tus clases fácilmente</h1>
+                    <p class="text-lg md:text-xl mb-6">Te explicamos paso a paso cómo utilizar nuestra app para reservar tus clases en Smartraining. ¡Es muy fácil y rápido!</p>
+                    <a href="#" class="inline-block px-6 py-3 bg-gray-50 text-red-600 font-bold rounded-full hover:bg-gray-200 transition duration-300">Descargar app</a>
+                </div>
+                <div class="md:w-6/12 mt-8 md:mt-0 relative">
+                    <div class="flex flex-row justify-center">
+                        <img src="../assets/img/mockup-cel.png" alt="Phone Mockup" class="w-36 h-auto" data-aos="fade-left" data-aos-duration="1000">
+                        <img src="../assets/img/registro.png" alt="Phone Mockup" class="w-36 h-auto" data-aos="fade-left" data-aos-duration="1200">
+                        <img src="../assets/img/clases.png" alt="Phone Mockup" class="w-36 h-auto" data-aos="fade-left" data-aos-duration="1400">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+    <!-- Sección de pasos -->
+    <section class="bg-white mt-12 mx-0">
+        <div class="flex flex-col items-between mx-auto text-center md:text-start">
+
+            <h2 class="text-3xl font-bold text-center">Pasos para utilizar la App</h2>
+            
+            <!-- Paso 3 -->
+            <div class="flex flex-col md:flex-row items-center justify-center md:space-x-8 space-y-6 md:space-y-0 px-12 py-12">
+                <!-- Contenedor de texto -->
+                <div class="md:w-5/12 text-center md:text-left space-y-6">
+                    <h3 class="text-2xl font-bold mb-4">Paso 1: Descargar la App</h3>
+                    <p class="text-lg">
+                        Para comenzar, debes descargar la app "Wona Sports" desde la App Store o Google Play.
+                    </p>
+                </div>
+                            
+                <!-- Mockup de imagen -->
+                <div class="flex flex-col items-center justify-center md:w-4/12">
+                    <img src="../assets/svg/logo-wona-sports-n.svg" alt="Mockup" class="w-48 h-auto">
+                    <div class="flex flex-row space-x-6 items-center justify-center md:items-start md:justify-start">
+                        <a href="https://apps.apple.com/uy/app/quierojugar-quieroentrenar/id1187323332?l=es-MX">
+                            <img src="../assets/svg/appleplay.svg" alt="Paso 1" class="w-24 h-auto">
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=uy.neoogilvy.quierojugarapp">
+                            <img src="../assets/svg/googleplay.svg" alt="Paso 1" class="w-24 h-auto">
+                        </a>
+                    </div>
+                </div>
+
+                
+            </div>
+
+            <!-- Paso 2 -->
+            <div class="flex flex-col md:flex-row items-center justify-center md:space-x-8 space-y-6 md:space-y-0 px-12 bg-gray-100">
+                <!-- Contenedor de texto -->
+                <div class="md:w-5/12 text-center md:text-left mt-12 md:order-2">
+                    <h3 class="text-2xl font-bold mb-4">Paso 2: Registrarse</h3>
+                    <p class="text-lg">
+                        Regístrate con tus datos. Una vez que lo hayas hecho, avísanos para que podamos agregarte como miembro del gimnasio.
+                    </p>
+                    <a href="LINK A WHATSAPP" class="inline-block mt-4 px-8 py-3 text-white rounded-full shadow-lg bg-gradient-to-r from-red-600 to-orange-600 md:hover:from-red-700 md:hover:to-orange-700 transition duration-300">Avisanos acá</a>
+                </div>
+                
+                <!-- Mockup de imagen -->
+                <div class="md:w-4/12">
+                  <img src="../assets/img/registro.png" alt="Mockup" class="w-full h-auto" data-aos="fade-right" data-aos-duration="1000">
+                </div>
+            </div>
+
+            <!-- Paso 3 -->
+            <div class="flex flex-col md:flex-row items-center justify-center md:space-x-8 space-y-6 md:space-y-0 px-12">
+                <!-- Contenedor de texto -->
+                <div class="md:w-5/12 text-center md:text-left mt-12">
+                    <h3 class="text-2xl font-bold mb-4">Paso 3: Buscar clases y reservar</h3>
+                    <p class="text-lg">
+                        Accede a nuestro perfil en la app y revisa las clases disponibles. Puedes seleccionar la clase que desees y reservar tu lugar.
+                    </p>
+                </div>
+                
+                <!-- Mockup de imagen -->
+                <div class="md:w-4/12">
+                  <img src="../assets/img/clases.png" alt="Mockup" class="w-full h-auto" data-aos="fade-left" data-aos-duration="1000">
+                </div>
+              </div>
+
+            <!-- Paso 4 -->
+            <div class="flex flex-col md:flex-row items-center justify-center md:space-x-8 space-y-6 md:space-y-0 px-12 bg-gray-100">
+                <!-- Contenedor de texto -->
+                <div class="md:w-5/12 text-center md:text-left mt-12 md:order-2">
+                    <h3 class="text-2xl font-bold mb-4">Paso 4: Cancelar o modificar reservas</h3>
+                    <p class="text-lg">
+                        Si no puedes asistir a una clase, por favor, cancela tu reserva para que otro socio pueda aprovechar ese lugar.
+                    </p>
+                </div>
+                
+                <!-- Mockup de imagen -->
+                <div class="md:w-4/12">
+                  <img src="../assets/img/cancelar.png" alt="Mockup" class="w-full h-auto" data-aos="fade-right" data-aos-duration="1000">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Smartraining. Todos los derechos reservados.</p>
+            <div class="mt-4">
+                <a href="https://www.facebook.com/Smartraining.uy" class="text-gray-400 md:hover:text-white mx-2">Facebook</a>
+                <a href="https://www.instagram.com/smartraining.uy/" class="text-gray-400 md:hover:text-white mx-2">Instagram</a>
+            </div>
+        </div>
+    </footer>
+    
+    
+    
+        <script src="https://cdn.tailwindcss.com"></script>
+    
+            <!-- Enlace al archivo de JavaScript -->
+            <script src="../js/logica.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+
 </body>
+</html>
