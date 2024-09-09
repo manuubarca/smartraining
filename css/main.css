@@ -1,0 +1,27 @@
+.swiper-container {
+    width: 100%;
+    height: auto;
+    overflow: hidden;  // Esconde los elementos fuera del viewport
+}
+
+.swiper-slide {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-width: 100%;  // Asegura que cada slide ocupe todo el ancho del contenedor
+    box-sizing: border-box;
+}
+
+.swiper-slide img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    max-height: 200px; /* Este límite puede ser ajustado según tu preferencia */
+}
+
+.swiper-wrapper {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
