@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -244,3 +245,249 @@
 
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gimnasio Smartraining</title>
+    <link rel="icon" href="./assets/svg/iso_gr_sg.svg" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Incluir Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto p-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="./assets/svg/imago_gr_sg.svg" alt="Logo Smartraining" class="h-10 w-auto mx-4">
+            </div>
+
+            <!-- Botón del menú hamburguesa -->
+            <button id="menu-toggle" class="block md:hidden text-gray-800 focus:outline-none">
+                <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+
+            <!-- Menú de navegación -->
+            <nav id="menu" class="hidden md:flex space-x-6">
+                <a href="#" class="block text-gray-800 md:hover:text-red-600">Inicio</a>
+                <a href="./pages/nuestras-clases.html" class="block text-gray-800 md:hover:text-red-600">Nuestras clases</a>
+                <a href="#" class="block text-gray-800 md:hover:text-red-600">Sobre Nosotros</a>
+                <a href="#" class="block text-gray-800 md:hover:text-red-600">App de reserva</a>
+                <a href="#" class="block text-gray-800 md:hover:text-red-600">Beneficios</a>
+                <a href="./pages/contacto.html" class="block text-gray-800 md:hover:text-red-600">Contacto</a>
+            </nav>
+        </div>
+
+        <!-- Menú para dispositivos móviles -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <nav class="px-4 pt-2 pb-4 space-y-2">
+                <a href="#" class="block text-gray-800 md:hover:text-red-600">Inicio</a>
+                <a href="./pages/nuestras-clases.html" class="block text-gray-800 md:hover:text-red-600">Nuestras clases</a>
+                <a href="#" class="block text-gray-800 md:hover:text-red-600">Sobre Nosotros</a>
+                <a href="#" class="block text-gray-800 md:hover:text-red-600">App de reserva</a>
+                <a href="#" class="block text-gray-800 md:hover:text-red-600">Beneficios</a>
+                <a href="./pages/contacto.html" class="block text-gray-800 md:hover:text-red-600">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative bg-cover bg-center h-screen" style="background-image: url('/assets/img/smt-73.jpg');">
+        <!-- Overlay semitransparente -->
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+
+        <!-- Contenido -->
+        <div class="relative container mx-auto flex flex-col justify-center items-center h-full text-center px-4">
+            <h1 class="text-4xl md:text-6xl text-white font-extrabold italic uppercase">Nueva Imagen <br/> Mismo Espíritu</h1>
+            <p class="text-white text-lg md:text-xl mt-4 font-bold">Entrena inteligente, entrena diferente.</p>
+            <a href="#services" class="mt-8 px-8 py-3 text-white rounded-full shadow-lg bg-gradient-to-r from-red-600 to-orange-600 md:hover:from-red-700 md:hover:to-orange-700 transition duration-300">Descubre Nuestras Clases</a>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-gray-100  relative overflow-hidden">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center md:items-start text-center md:text-left relative z-10">
+            <!-- Texto del apartado -->
+            <div class="md:w-1/2">
+                <h2 class="text-3xl font-extrabold italic uppercase text-black mb-6 inline-block">Sobre Nosotros</h2>
+                <p class="text-lg">En Smartraining, combinamos fuerza física y mental para ayudarte a alcanzar tus metas. Conoce a nuestro equipo de expertos, dedicados a guiarte y motivarte en cada paso de tu entrenamiento.</p>
+            </div>
+            <div class="swiper-container md:w-1/2">
+                <div class="swiper-wrapper flex flex-row">
+                    <div class="swiper-slide flex flex-col">
+                        <img src="/assets/img/andy.png" alt="Foto de Andrés" class="h-48 w-48 object-cover rounded-full mx-auto">
+                        <p class="mt-4 text-xl font-bold text-center">Andrés</p>
+                        <p class="text-gray-600 text-center">Entrenador Principal</p>
+                    </div>
+                    <div class="swiper-slide flex flex-col">
+                        <img src="./assets/img/emi.png" alt="Foto de Emilio" class="h-48 w-48 object-cover rounded-full mx-auto">
+                        <p class="mt-4 text-xl font-bold text-center">Emilio</p>
+                        <p class="text-gray-600 text-center">Instructor de Crosstraining</p>
+                    </div>
+                    <div class="swiper-slide flex flex-col">
+                        <img src="./assets/img/manu.png" alt="Foto de Valeria" class="h-48 w-48 object-cover rounded-full mx-auto">
+                        <p class="mt-4 text-xl font-bold text-center">Manuel</p>
+                        <p class="text-gray-600 text-center">Creador de contenidos</p>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+        <!-- Background decorative shapes -->
+        <div class="absolute inset-0 overflow-visible">
+            <div class="invisible md:visible absolute top-2/4 left-1/4 w-48 h-48 bg-gradient-to-r from-orange-600 to-red-600 rounded-full opacity-100"></div>
+            <div class="invisible md:visible absolute bottom-1/3 right-1/4 w-96 h-96 bg-gradient-to-b from-orange-600 to-red-600 rounded-full opacity-100"></div>
+            <div class="absolute -right-1/4 -bottom-10 w-72 h-72 bg-gradient-to-b from-red-600 to-orange-600 rounded-full opacity-100"></div>
+            <div class="absolute left-3 top-10 w-12 h-12 bg-gradient-to-b from-red-600 to-orange-600 rounded-full opacity-100"></div>
+        </div>
+    </section>
+
+<!-- Services/Classes -->
+<section id="services" class="py-20 bg-gray-50 relative">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-4xl font-extrabold italic uppercase text-white mb-12 bg-gradient-to-r from-red-600 to-orange-600 inline-block px-6 py-4 rounded-full shadow-lg">
+            Nuestras Clases
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            <!-- Class Card 1 -->
+            <div class="relative bg-white rounded-lg shadow-lg overflow-hidden transform md:hover:scale-105 transition duration-500 ease-in-out">
+                <img src="./assets/img/cross.jpg" alt="Crosstraining" class="w-full h-40 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-extrabold italic uppercase text-red-600">Smartcross</h3>
+                    <p class="mt-4 text-gray-700">Potencia tu fuerza y resistencia con nuestras clases de Crosstraining, únicas en la ciudad.</p>
+                </div>
+            </div>
+            <!-- Class Card 2 -->
+            <div class="relative bg-white rounded-lg shadow-lg overflow-hidden transform md:hover:scale-105 transition duration-500 ease-in-out">
+                <img src="./assets/img/funcional.jpg" alt="Funcional" class="w-full h-40 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-extrabold italic uppercase text-orange-600">Smartfun</h3>
+                    <p class="mt-4 text-gray-700">Mejora tu agilidad y coordinación con nuestros entrenamientos funcionales adaptados a todos los niveles.</p>
+                </div>
+            </div>
+            <!-- Class Card 3 -->
+            <div class="relative bg-white rounded-lg shadow-lg overflow-hidden transform md:hover:scale-105 transition duration-500 ease-in-out">
+                <img src="./assets/img/pilates.jpg" alt="Pilates" class="w-full h-40 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-extrabold italic uppercase text-red-600">Pilates</h3>
+                    <p class="mt-4 text-gray-700">Fortalece tu cuerpo y mente con nuestras clases de Pilates, guiadas por instructores expertos.</p>
+                </div>
+            </div>
+            <!-- Class Card 4 -->
+            <div class="relative bg-white rounded-lg shadow-lg overflow-hidden transform md:hover:scale-105 transition duration-500 ease-in-out">
+                <img src="./assets/img/sala.jpg" alt="Entrenamiento de Sala" class="w-full h-40 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-extrabold italic uppercase text-orange-600">Smartfree</h3>
+                    <p class="mt-4 text-gray-700">Accede a un entrenamiento personalizado en nuestra sala de aparatos de última generación.</p>
+                </div>
+            </div>
+            <!-- Class Card 5 -->
+            <div class="relative bg-white rounded-lg shadow-lg overflow-hidden transform md:hover:scale-105 transition duration-500 ease-in-out">
+                <img src="./assets/img/pase libre.jpg" alt="Pase Libre" class="w-full h-40 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-extrabold italic uppercase text-red-600">Pase Libre</h3>
+                    <p class="mt-4 text-gray-700">Disfruta de acceso ilimitado a todas nuestras actividades y servicios con el Pase Libre.</p>
+                </div>
+            </div>
+            <!-- Class Card 6 -->
+            <div class="relative bg-white rounded-lg shadow-lg overflow-hidden transform md:hover:scale-105 transition duration-500 ease-in-out">
+                <img src="./assets/img/online.jpg" alt="Entrenamiento Online" class="w-full h-40 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-extrabold italic uppercase text-orange-600">Entrenamiento Online</h3>
+                    <p class="mt-4 text-gray-700">Planificaciones personalizadas con seguimiento online para que puedas entrenar desde donde estés.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <section id="testimonials" class="py-20 bg-gray-100 relative overflow-hidden">
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <h2 class="text-4xl font-extrabold italic uppercase text-black mb-6">
+                Lo que dicen nuestros socios
+            </h2>
+    
+            <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
+                <!-- Testimonial 1 -->
+                <div class="relative bg-white rounded-lg shadow-lg p-8 transform md:hover:scale-105 transition duration-500 ease-in-out">
+                    <p class="relative text-lg italic text-gray-800 z-20">"En Smartraining no solo hago deporte, sino que me divierto. Los profesores y compañeros te motivan, y el ambiente es increíble. Es un lugar donde realmente disfruto entrenar."</p>
+                    <p class="relative mt-4 text-xl font-bold text-red-600 z-20">Manuela</p>
+                    <div class="absolute bottom-0 right-0 w-24 h-24 bg-gradient-to-r from-red-600 to-orange-600 rounded-full opacity-100 transform translate-x-1/2 translate-y-1/2 rotate-45"></div>
+                </div>
+    
+                <!-- Testimonial 2 -->
+                <div class="relative bg-white rounded-lg shadow-lg p-8 transform md:hover:scale-105 transition duration-500 ease-in-out">
+                    <div class="absolute bottom-10 -left-10 w-12 h-12 bg-gradient-to-b from-red-600 to-orange-600 rounded-full opacity-100 transform translate-x-1/2 -translate-y-1/2 rotate-45"></div>
+                    <p class="relative text-lg italic text-gray-800 z-20">"Desde que comencé en Smartraining, he notado un cambio en mi rendimiento físico. El enfoque en objetivos específicos me ha ayudado a mejorar en cada sesión."</p>
+                    <p class="relative mt-4 text-xl font-bold text-red-600 z-20">Lourdes</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Background decorative shapes -->
+        <div class="absolute inset-0 overflow-visible">
+            <div class="absolute -left-10 -top-10 w-96 h-96 bg-gradient-to-b from-orange-600 to-red-600 rounded-full opacity-100"></div>
+        </div>
+    </section>    
+
+<!-- Wona Sports App -->
+<section id="wona-sports" class="py-20 bg-black text-white relative overflow-hidden">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-4xl font-extrabold italic uppercase text-white inline-block">
+            Gestiona tu entrenamiento con Wona Sports
+        </h2>
+        <div class="flex flex-col md:flex-row justify-center items-center mt-6">
+            <!-- Logo de la App -->
+            <div class="w-40 h-40 md:w-48 md:h-48 flex items-center justify-center overflow-hidden shadow-2xl mb-8 md:mb-0 md:mr-12 transform md:hover:scale-110 transition duration-500 ease-in-out">
+                <img src="./assets/svg/logo-wona-sports.svg" alt="Wona Sports Logo" class="w-3/4 h-3/4">
+            </div>
+            <!-- Descripción y Botón -->
+            <div class="text-center md:text-left md:w-2/3">
+                <p class="text-lg md:text-xl mb-6">La app te permite organizar tus reservas y actividades de manera rápida y sencilla. Además podrás ver el estado de tu plan, información del gimnasio, y mucho más.</p>
+                <a href="/wona-sports" class="inline-block mt-4 px-8 py-3 text-white rounded-full shadow-lg bg-gradient-to-r from-red-600 to-orange-600 md:hover:from-red-700 md:hover:to-orange-700 transition duration-300">Más Información</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Vínculo con ACP -->
+    <section id="acp" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-extrabold italic uppercase text-gray-900 mb-6">Beneficios con ACP</h2>
+            <p class="text-lg">Gracias a nuestra colaboración con el gimnasio ACP, nuestros socios disfrutan de beneficios exclusivos. Conoce todos los detalles aquí.</p>
+            <a href="/acp-benefits" class="mt-8 px-8 py-3 text-white rounded-full shadow-lg bg-gradient-to-r from-red-600 to-orange-600 md:hover:from-red-700 md:hover:to-orange-700 transition duration-300">Ver Beneficios</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Smartraining. Todos los derechos reservados.</p>
+            <div class="mt-4">
+                <a href="https://www.facebook.com/Smartraining.uy" class="text-gray-400 md:hover:text-white mx-2">Facebook</a>
+                <a href="https://www.instagram.com/smartraining.uy/" class="text-gray-400 md:hover:text-white mx-2">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    
+    <!-- Incluir Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Enlace al archivo de JavaScript -->
+    <script src="js/logica.js"></script>
+
+</body>
+</html>
+>>>>>>> 2d3b4d4f86ee76ba5418ab2a5847736af2d2d078
