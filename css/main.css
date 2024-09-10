@@ -76,3 +76,14 @@
             }
         }
         
+
+        .sticky {
+            background-color: rgba(255, 255, 255, 0.90); /* Fondo blanco semi-transparente */
+            transition: background-color 0.3s ease; /* Suaviza la transición */
+          }
+          
+
+          html {
+            scroll-behavior: smooth;
+         }
+         

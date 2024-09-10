@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gimnasio Smartraining</title>
+    <title>Gimnasio Smartraining | Crosstraining, Pilates y Entrenamiento Funcional en Canelones</title>
+    <meta name="description" content="Descubre Smartraining, el gimnasio líder en Canelones. Ofrecemos Crosstraining, Pilates y entrenamiento funcional. ¡Reserva tu clase gratis hoy!">
     <link rel="icon" href="./assets/svg/iso_gr_sg.svg" type="image/png">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./dist/styles.css">
+    <link rel="stylesheet" href="./css/main.css">
     <!-- Incluir Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./css/main.css">
 </head>
 <body class="bg-gray-100 text-gray-900">
 
     <!-- Header -->
-    <header class="bg-white shadow-md">
+    <header class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto p-4 flex justify-between items-center">
             <div class="flex items-center">
                 <a href="./index.html" class="block text-black md:hover:text-red-600">
-                    <img src="./assets/svg/imago_gr_sg.svg" alt="Logo Smartraining" class="h-10 w-auto mx-4">
+                    <img src="./assets/svg/imago_gr_sg.svg" alt="Logo Smartraining" class="h-10 w-full mx-4">
                 </a>
             </div>
 
@@ -54,13 +54,13 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="hero" class="relative bg-cover bg-center h-screen" style="background-image: url('/assets/img/smt-73.jpg');">
+    <section id="hero" class="relative bg-cover bg-center h-screen" style="background-image: url('/assets/img/index/portada.webp');">
         <!-- Overlay semitransparente -->
         <div class="absolute inset-0 bg-black opacity-50"></div>
 
         <!-- Contenido -->
         <div class="relative container mx-auto flex flex-col justify-center items-center h-full text-center px-4">
-            <h1 class="text-4xl md:text-6xl text-white font-extrabold italic uppercase">Nueva Imagen <br/> Mismo Espíritu</h1>
+            <h1 class="text-4xl md:text-6xl text-white font-extrabold italic uppercase">smartraining</h1>
             <p class="text-white text-lg md:text-xl mt-4 font-bold">Entrena inteligente, entrena diferente.</p>
             <a href="./pages/nuestras-clases.html" class="mt-8 px-8 py-3 text-white rounded-full shadow-lg bg-gradient-to-r from-red-600 to-orange-600 md:hover:from-red-700 md:hover:to-orange-700 transition duration-300">Descubre Nuestras Clases</a>
         </div>
@@ -76,17 +76,17 @@
             <div class="swiper-container md:w-1/2">
                 <div class="swiper-wrapper flex flex-row">
                     <div class="swiper-slide flex flex-col">
-                        <img src="/assets/img/andy.png" alt="Foto de Andrés" class="h-48 w-48 object-cover rounded-full mx-auto">
+                        <img src="/assets/img/andy.png" alt="Foto de Andrés" class="object-cover rounded-full mx-auto" loading="lazy">
                         <p class="mt-4 text-xl font-bold text-center">Andrés</p>
                         <p class="text-gray-600 text-center">Entrenador Principal</p>
                     </div>
                     <div class="swiper-slide flex flex-col">
-                        <img src="./assets/img/emi.png" alt="Foto de Emilio" class="h-48 w-48 object-cover rounded-full mx-auto">
+                        <img src="./assets/img/emi.png" alt="Foto de Emilio" class="object-cover rounded-full mx-auto" loading="lazy">
                         <p class="mt-4 text-xl font-bold text-center">Emilio</p>
                         <p class="text-gray-600 text-center">Instructor de Crosstraining</p>
                     </div>
                     <div class="swiper-slide flex flex-col">
-                        <img src="./assets/img/manu.png" alt="Foto de Valeria" class="h-48 w-48 object-cover rounded-full mx-auto">
+                        <img src="./assets/img/manu.png" alt="Foto de Valeria" class="object-cover rounded-full mx-auto" loading="lazy">
                         <p class="mt-4 text-xl font-bold text-center">Manuel</p>
                         <p class="text-gray-600 text-center">Creador de contenidos</p>
                     </div>
@@ -114,7 +114,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
             <!-- Class Card 1 -->
             <div class="relative bg-white rounded-lg shadow-lg overflow-hidden transform md:hover:scale-105 transition duration-500 ease-in-out">
-                <img src="./assets/img/cross.jpg" alt="Crosstraining" class="w-full h-40 object-cover">
+                <img src="./assets/img/index/cross.webp" alt="Crosstraining" class="w-full h-40 object-cover" loading="lazy">
                 <div class="p-6">
                     <h3 class="text-2xl font-extrabold italic uppercase text-red-600">Smartcross</h3>
                     <p class="mt-4 text-gray-700">Potencia tu fuerza y resistencia con nuestras clases de Crosstraining, únicas en la ciudad.</p>
@@ -122,7 +122,7 @@
             </div>
             <!-- Class Card 2 -->
             <div class="relative bg-white rounded-lg shadow-lg overflow-hidden transform md:hover:scale-105 transition duration-500 ease-in-out">
-                <img src="./assets/img/funcional.jpg" alt="Funcional" class="w-full h-40 object-cover">
+                <img src="./assets/img/index/funcional.webp" alt="Funcional" class="w-full h-40 object-cover" loading="lazy">
                 <div class="p-6">
                     <h3 class="text-2xl font-extrabold italic uppercase text-orange-600">Smartfun</h3>
                     <p class="mt-4 text-gray-700">Mejora tu agilidad y coordinación con nuestros entrenamientos funcionales adaptados a todos los niveles.</p>
@@ -130,7 +130,7 @@
             </div>
             <!-- Class Card 3 -->
             <div class="relative bg-white rounded-lg shadow-lg overflow-hidden transform md:hover:scale-105 transition duration-500 ease-in-out">
-                <img src="./assets/img/pilates.jpg" alt="Pilates" class="w-full h-40 object-cover">
+                <img src="./assets/img/index/pilates.webp" alt="Pilates" class="w-full h-40 object-cover" loading="lazy">
                 <div class="p-6">
                     <h3 class="text-2xl font-extrabold italic uppercase text-red-600">Pilates</h3>
                     <p class="mt-4 text-gray-700">Fortalece tu cuerpo y mente con nuestras clases de Pilates, guiadas por instructores expertos.</p>
@@ -138,7 +138,7 @@
             </div>
             <!-- Class Card 4 -->
             <div class="relative bg-white rounded-lg shadow-lg overflow-hidden transform md:hover:scale-105 transition duration-500 ease-in-out">
-                <img src="./assets/img/sala.jpg" alt="Entrenamiento de Sala" class="w-full h-40 object-cover">
+                <img src="./assets/img/index/sala.webp" alt="Entrenamiento de Sala" class="w-full h-40 object-cover" loading="lazy">
                 <div class="p-6">
                     <h3 class="text-2xl font-extrabold italic uppercase text-orange-600">Smartfree</h3>
                     <p class="mt-4 text-gray-700">Accede a un entrenamiento personalizado en nuestra sala de aparatos de última generación.</p>
@@ -146,7 +146,7 @@
             </div>
             <!-- Class Card 5 -->
             <div class="relative bg-white rounded-lg shadow-lg overflow-hidden transform md:hover:scale-105 transition duration-500 ease-in-out">
-                <img src="./assets/img/pase libre.jpg" alt="Pase Libre" class="w-full h-40 object-cover">
+                <img src="./assets/img/index/pase-libre.webp" alt="Pase Libre" class="w-full h-40 object-cover" loading="lazy">
                 <div class="p-6">
                     <h3 class="text-2xl font-extrabold italic uppercase text-red-600">Pase Libre</h3>
                     <p class="mt-4 text-gray-700">Disfruta de acceso ilimitado a todas nuestras actividades y servicios con el Pase Libre.</p>
@@ -154,7 +154,7 @@
             </div>
             <!-- Class Card 6 -->
             <div class="relative bg-white rounded-lg shadow-lg overflow-hidden transform md:hover:scale-105 transition duration-500 ease-in-out">
-                <img src="./assets/img/online.jpg" alt="Entrenamiento Online" class="w-full h-40 object-cover">
+                <img src="./assets/img/index/online.webp" alt="Entrenamiento Online" class="w-full h-40 object-cover" loading="lazy">
                 <div class="p-6">
                     <h3 class="text-2xl font-extrabold italic uppercase text-orange-600">Entrenamiento Online</h3>
                     <p class="mt-4 text-gray-700">Planificaciones personalizadas con seguimiento online para que puedas entrenar desde donde estés.</p>
@@ -203,7 +203,7 @@
         <div class="flex flex-col md:flex-row justify-center items-center mt-6">
             <!-- Logo de la App -->
             <div class="w-40 h-40 md:w-48 md:h-48 flex items-center justify-center overflow-hidden shadow-2xl mb-8 md:mb-0 md:mr-12 transform md:hover:scale-110 transition duration-500 ease-in-out">
-                <img src="./assets/svg/logo-wona-sports.svg" alt="Wona Sports Logo" class="w-3/4 h-3/4">
+                <img src="./assets/svg/logo-wona-sports.svg" alt="Wona Sports Logo" class="w-3/4 h-3/4" loading="lazy">
             </div>
             <!-- Descripción y Botón -->
             <div class="text-center md:text-left md:w-2/3">
@@ -220,7 +220,7 @@
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-3xl font-extrabold italic uppercase text-gray-900 mb-6">Beneficios con ACP</h2>
             <p class="text-lg">Gracias a nuestra colaboración con el gimnasio ACP, nuestros socios disfrutan de beneficios exclusivos. Conoce todos los detalles aquí.</p>
-            <a href="/acp-benefits" class="mt-8 px-8 py-3 text-white rounded-full shadow-lg bg-gradient-to-r from-red-600 to-orange-600 md:hover:from-red-700 md:hover:to-orange-700 transition duration-300">Ver Beneficios</a>
+            <a href="./pages/app-de-reserva.html" class="inline-block mt-4 px-8 py-3 text-white rounded-full shadow-lg bg-gradient-to-r from-red-600 to-orange-600 md:hover:from-red-700 md:hover:to-orange-700 transition duration-300">Ver beneficios</a>
         </div>
     </section>
 
@@ -235,12 +235,11 @@
         </div>
     </footer>
 
-    
-    <!-- Incluir Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
     <!-- Enlace al archivo de JavaScript -->
     <script src="js/logica.js"></script>
+
+    <!-- Incluir Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 </body>
 </html>

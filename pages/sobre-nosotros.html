@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Nosotros - Smartraining</title>
-    <link rel="icon" href="../assets/svg/iso_gr_sg.svg" type="image/png">
+    <title>Conoce al Equipo de Smartraining | Gimnasio en Canelones</title>
+    <meta name="description" content="Conoce a Andrés, Emilio y Valeria, los instructores de Smartraining en Canelones. Más de 10 años de experiencia en entrenamiento físico y mental.">
+    <link rel="stylesheet" href="../dist/styles.css">
     <link rel="stylesheet" href="../css/main.css">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Header -->
-    <header class="bg-white shadow-md relative z-10">
+     <!-- Header -->
+     <header class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto p-4 flex justify-between items-center">
             <div class="flex items-center">
                 <a href="../index.html" class="block text-black md:hover:text-red-600">
@@ -51,18 +51,18 @@
     </header>
 
     <!-- Sección Hero con Imagen de Fondo -->
-    <section id="sobre-nosotros-hero" class="relative py-20 bg-cover bg-center fade-in" style="background-image: url('../assets/img/smt-2.jpg');">
+    <section id="sobre-nosotros-hero" class="relative py-20 bg-cover bg-center h-screen" style="background-image: url('../assets/img/gim-viejonuevo.webp');">
         <div class="absolute inset-0 bg-black opacity-60"></div>
         <div class="container mx-auto relative z-10 text-center md:text-left text-white">
-            <h1 class="text-5xl md:text-6xl font-extrabold italic uppercase mb-6 fade-in visible">Sobre Nosotros</h1>
-            <p class="text-lg md:text-xl mb-6 fade-in visible">En Smartraining ofrecemos una experiencia de entrenamiento única, combinando lo físico y lo mental. Conoce nuestra historia y lo que nos hace diferentes.</p>
+            <h1 class="text-5xl md:text-6xl font-extrabold italic uppercase mb-6 visible">Sobre Nosotros</h1>
+            <p class="text-lg md:text-xl mb-6 visible">En Smartraining ofrecemos una experiencia de entrenamiento única, combinando lo físico y lo mental. Conoce nuestra historia y lo que nos hace diferentes.</p>
             <a href="#equipo" class="inline-block px-6 py-3 bg-gradient-to-r from-red-600 to-orange-600 text-white rounded-full shadow-lg hover:scale-105 transition duration-300">Conoce a nuestro equipo</a>
         </div>
     </section>
 
     <!-- Sección Nuestra Historia -->
-    <section id="our-story" class="py-16 bg-gray-100">
-        <div class="container mx-auto px-6">
+    <section id="our-story" class="py-16 px-12 md:px-0 bg-gray-100">
+        <div class="container mx-auto">
             <div class="md:flex items-center">
                 <div class="md:w-1/2 mb-8 md:mb-0">
                     <h2 class="text-4xl font-extrabold italic uppercase text-gray-900 mb-6 fade-in">Nuestra Historia</h2>
@@ -74,20 +74,20 @@
                     </p>
                 </div>
                 <div class="md:w-1/2 md:pl-8 fade-in">
-                    <img src="../assets/img/viejo-gim.jpg" alt="Historia de Smartraining" class="h-auto w-2/3 rounded-lg shadow-lg mx-auto md:mx-0">
+                    <img src="../assets/img/viejo-gim.webp" alt="Historia de Smartraining" class="h-auto w-2/3 rounded-lg shadow-lg mx-auto md:mx-0" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Sección Crecimiento y Expansión con diseño alternado -->
-    <section id="growth" class="py-16 bg-white">
-        <div class="container mx-auto px-6 md:flex items-center">
+    <section id="growth" class="py-16 px-12 md:px-0 bg-white">
+        <div class="container mx-auto md:flex items-center">
             <div class="md:w-1/2 fade-in">
-                <img src="../assets/img/growth.jpg" alt="Crecimiento Smartraining" class="w-full h-auto object-cover rounded-lg shadow-lg">
+                <img src="../assets/img/reforma.png" alt="Crecimiento Smartraining" class="w-72 h-auto object-cover rounded-lg shadow-lg" loading="lazy">
             </div>
             <div class="md:w-1/2 md:pl-8">
-                <h2 class="text-4xl font-extrabold italic uppercase text-gray-900 mb-6 fade-in">Crecimiento y Expansión</h2>
+                <h2 class="text-4xl font-extrabold italic uppercase text-gray-900 my-6 fade-in">Crecimiento y Expansión</h2>
                 <p class="text-lg text-gray-700 mb-6 fade-in">
                     Esta es la segunda vez que mudamos nuestras instalaciones, ampliando para brindar más espacio y mejores oportunidades para entrenar, manteniendo nuestro compromiso de calidad.
                 </p>
@@ -98,25 +98,73 @@
         </div>
     </section>
 
-</main>
+    <!-- Sección de Misión y Valores -->
+    <section id="mision-valores" class="py-16 bg-white">
+        <div class="container mx-auto px-6 md:px-0 text-center">
+            <h2 class="text-4xl font-extrabold italic uppercase text-gray-900 mb-6">Nuestra Misión y Valores</h2>
+            <p class="text-lg text-gray-700 mb-8">
+                En Smartraining, creemos en la superación personal, en el esfuerzo y en la comunidad. Nos esforzamos por crear un ambiente inclusivo y adaptable a todas las capacidades físicas.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-red-600 mb-4">Inclusión</h3>
+                    <p class="text-gray-600">Damos la bienvenida a personas de todas las edades, géneros y habilidades, con entrenamientos personalizados para cada uno.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-red-600 mb-4">Compromiso</h3>
+                    <p class="text-gray-600">Nos comprometemos a ofrecerte lo mejor de nuestros entrenadores y nuestras instalaciones, ayudándote a alcanzar tus metas.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-red-600 mb-4">Superación</h3>
+                    <p class="text-gray-600">Creemos que siempre hay una versión mejor de ti. Te ayudamos a descubrirla en cada entrenamiento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección del equipo -->
+    <section id="equipo" class="py-16 bg-gray-50">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-extrabold italic uppercase text-gray-900 mb-6">Nuestro Equipo</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Reutilizamos la estructura del equipo ya trabajada -->
+                <div class="flex flex-col items-center">
+                    <img src="../assets/img/andy.png" alt="Foto de Andrés" class="h-48 w-48 object-cover rounded-full mb-4" loading="lazy">
+                    <p class="text-xl font-bold">Andrés</p>
+                    <p class="text-gray-600">Entrenador Principal</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img src="../assets/img/emi.png" alt="Foto de Emilio" class="h-48 w-48 object-cover rounded-full mb-4" loading="lazy">
+                    <p class="text-xl font-bold">Emilio</p>
+                    <p class="text-gray-600">Instructor de Crosstraining</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img src="../assets/img/pilates.webp" alt="Foto de Valeria" class="h-48 w-48 object-cover rounded-full mb-4" loading="lazy">
+                    <p class="text-xl font-bold">Valeria</p>
+                    <p class="text-gray-600">Instructora de Pilates</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección CTA Final -->
+    <section id="cta" class="py-16 bg-gray-50 text-center">
+        <div class="container mx-auto px-6 md:px-0">
+            <h2 class="text-4xl font-extrabold italic uppercase text-gray-900 mb-6">Únete a Nosotros</h2>
+            <p class="text-lg text-gray-600 mb-6">Forma parte de nuestra comunidad y lleva tu entrenamiento al siguiente nivel.</p>
+            <a href="./contacto.html" class="inline-block px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 text-white font-bold rounded-full shadow-lg hover:bg-red-700 transition duration-300">Contáctanos</a>
+        </div>
+    </section>
 
     <!-- Footer -->
-<footer class="bg-black text-white py-8">
-    <div class="container mx-auto text-center">
-        <p>&copy; 2024 Smartraining. Todos los derechos reservados.</p>
-        <div class="mt-4">
-            <a href="https://www.facebook.com/Smartraining.uy" class="text-gray-400 md:hover:text-white mx-2">Facebook</a>
-            <a href="https://www.instagram.com/smartraining.uy/" class="text-gray-400 md:hover:text-white mx-2">Instagram</a>
+    <footer class="bg-black text-white py-8">
+        <div class="container mx-auto text-center">
+            <p class="text-sm">&copy; 2024 Smartraining. Todos los derechos reservados.</p>
         </div>
-    </div>
-</footer>
+    </footer>
 
-
-
-    <script src="https://cdn.tailwindcss.com"></script>
-
-        <!-- Enlace al archivo de JavaScript -->
-        <script src="../js/logica.js"></script>
+<!-- Enlace al archivo de JavaScript -->
+<script src="../js/logica.js"></script>
 
 </body>
 </html>
