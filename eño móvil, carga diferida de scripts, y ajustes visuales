@@ -1,0 +1,48 @@
+[33mcommit b27beef38ae05105101f9a198885302eb5d944cc[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Manuel <mbarcaburguez1@gmail.com>
+Date:   Tue Sep 10 15:47:38 2024 -0300
+
+    Optimización de diseño móvil, carga diferida de scripts, y ajustes visuales
+
+[33mcommit 5174254beec0e78a901863d2a57b50eea634311e[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: Manuel <mbarcaburguez1@gmail.com>
+Date:   Mon Sep 9 21:49:37 2024 -0300
+
+    Eliminado submódulo 'smartraining'
+
+[33mcommit 447c2fb5b235f8241bcf6aa13056637adede19c8[m
+Author: Manuel <mbarcaburguez1@gmail.com>
+Date:   Mon Sep 9 16:31:45 2024 -0300
+
+    Removed references to submodules
+
+[33mcommit bdcf58af7066e9feda1c17779b0f9c7f0062ccc2[m
+Author: Manuel <mbarcaburguez1@gmail.com>
+Date:   Mon Sep 9 16:21:24 2024 -0300
+
+    vamos por ahora
+
+[33mcommit b382caff95efa25e0f666d46255415f124cc61ae[m
+Merge: 802065d 2d3b4d4
+Author: Manuel <mbarcaburguez1@gmail.com>
+Date:   Mon Sep 9 11:09:34 2024 -0300
+
+    ain
+
+[33mcommit 802065dd12f2055afb363f6a91858924c6de2bab[m
+Author: Manuel <mbarcaburguez1@gmail.com>
+Date:   Mon Sep 9 10:46:04 2024 -0300
+
+    aster
+
+[33mcommit 2d3b4d4f86ee76ba5418ab2a5847736af2d2d078[m
+Author: Manuel Barca <mbarcaburguez1@gmail.com>
+Date:   Thu Sep 5 15:16:56 2024 -0300
+
+    Anado readme
+
+[33mcommit c5c6a7f793a8f1203fdfea33ed07ba72b7ab2eb6[m
+Author: Manuel Barca <mbarcaburguez1@gmail.com>
+Date:   Thu Sep 5 15:12:08 2024 -0300
+
+    first commit

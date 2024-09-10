@@ -8,8 +8,7 @@
     <link rel="icon" href="./assets/svg/iso_gr_sg.svg" type="image/png">
     <link rel="stylesheet" href="./dist/styles.css">
     <link rel="stylesheet" href="./css/main.css">
-    <!-- Incluir Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.min.css">
 </head>
 <body class="bg-gray-100 text-gray-900">
 
@@ -73,27 +72,29 @@
                 <h2 class="text-3xl font-extrabold italic uppercase text-black mb-6 inline-block">Sobre Nosotros</h2>
                 <p class="text-lg">En Smartraining, combinamos fuerza física y mental para ayudarte a alcanzar tus metas. Conoce a nuestro equipo de expertos, dedicados a guiarte y motivarte en cada paso de tu entrenamiento.</p>
             </div>
-            <div class="swiper-container md:w-1/2">
-                <div class="swiper-wrapper flex flex-row">
-                    <div class="swiper-slide flex flex-col">
-                        <img src="/assets/img/andy.png" alt="Foto de Andrés" class="object-cover rounded-full mx-auto" loading="lazy">
-                        <p class="mt-4 text-xl font-bold text-center">Andrés</p>
-                        <p class="text-gray-600 text-center">Entrenador Principal</p>
+            <div class="md:w-1/2">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide flex flex-col">
+                            <img src="/assets/img/andy.png" alt="Foto de Andrés" class="object-cover rounded-full mx-auto" loading="lazy">
+                            <p class="mt-4 text-xl font-bold text-center">Andrés</p>
+                            <p class="text-gray-600 text-center">Entrenador Principal</p>
+                        </div>
+                        <div class="swiper-slide flex flex-col">
+                            <img src="./assets/img/emi.png" alt="Foto de Emilio" class="object-cover rounded-full mx-auto" loading="lazy">
+                            <p class="mt-4 text-xl font-bold text-center">Emilio</p>
+                            <p class="text-gray-600 text-center">Instructor de Crosstraining</p>
+                        </div>
+                        <div class="swiper-slide flex flex-col">
+                            <img src="./assets/img/manu.png" alt="Foto de Valeria" class="object-cover rounded-full mx-auto" loading="lazy">
+                            <p class="mt-4 text-xl font-bold text-center">Manuel</p>
+                            <p class="text-gray-600 text-center">Creador de contenidos</p>
+                        </div>
                     </div>
-                    <div class="swiper-slide flex flex-col">
-                        <img src="./assets/img/emi.png" alt="Foto de Emilio" class="object-cover rounded-full mx-auto" loading="lazy">
-                        <p class="mt-4 text-xl font-bold text-center">Emilio</p>
-                        <p class="text-gray-600 text-center">Instructor de Crosstraining</p>
-                    </div>
-                    <div class="swiper-slide flex flex-col">
-                        <img src="./assets/img/manu.png" alt="Foto de Valeria" class="object-cover rounded-full mx-auto" loading="lazy">
-                        <p class="mt-4 text-xl font-bold text-center">Manuel</p>
-                        <p class="text-gray-600 text-center">Creador de contenidos</p>
-                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
             </div>
         </div>
         <!-- Background decorative shapes -->
@@ -236,10 +237,10 @@
     </footer>
 
     <!-- Enlace al archivo de JavaScript -->
-    <script src="js/logica.js"></script>
+    <script src="./js/logica.js"></script>
 
     <!-- Incluir Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./node_modules/swiper/swiper-bundle.min.js"></script>
 
 </body>
 </html>

@@ -7,10 +7,10 @@ menuToggle.addEventListener('click', () => {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-    var swiper = new swiper('.swiper-container', {
+    var swiper = new Swiper('.swiper-container', {
         loop: true,
         slidesPerView: 1,  // Asegúrate de que solo un slide sea visible
-        spaceBetween: 30,
+        spaceBetween: 10,
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     });
 
- // Función para hacer que los elementos aparezcan al hacer scroll
+// Función para hacer que los elementos aparezcan al hacer scroll
 const fadeIns = document.querySelectorAll('.fade-in');
 window.addEventListener('scroll', () => {
     fadeIns.forEach(el => {
