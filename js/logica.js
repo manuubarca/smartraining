@@ -37,3 +37,19 @@ window.addEventListener('scroll', () => {
             }
         });
 });
+
+// Mostrar el botón solo cuando el usuario hace scroll
+window.onscroll = function() {
+    var backToTopButton = document.getElementById("back-to-top");
+    if (window.scrollY > 100) {
+        backToTopButton.classList.remove('hidden');
+    } else {
+        backToTopButton.classList.add('hidden');
+    }
+};
+
+// Función para volver al inicio al hacer clic
+document.getElementById("back-to-top").addEventListener("click", function(event){
+    event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});

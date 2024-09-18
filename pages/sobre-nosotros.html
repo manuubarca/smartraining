@@ -50,77 +50,147 @@
         </div>
     </header>
 
-    <!-- Sección Hero con Imagen de Fondo -->
-    <section id="sobre-nosotros-hero" class="relative py-20 bg-cover bg-center h-screen" style="background-image: url('../assets/img/gim-viejonuevo.webp');">
-        <div class="absolute inset-0 bg-black opacity-60"></div>
-        <div class="container mx-auto relative z-10 text-center md:text-left text-white">
-            <h1 class="text-5xl md:text-6xl font-extrabold italic uppercase mb-6 visible">Sobre Nosotros</h1>
-            <p class="text-lg md:text-xl mb-6 visible">En Smartraining ofrecemos una experiencia de entrenamiento única, combinando lo físico y lo mental. Conoce nuestra historia y lo que nos hace diferentes.</p>
-            <a href="#equipo" class="inline-block px-6 py-3 bg-gradient-to-r from-red-600 to-orange-600 text-white rounded-full shadow-lg hover:scale-105 transition duration-300">Conoce a nuestro equipo</a>
-        </div>
-    </section>
-
-    <!-- Sección Nuestra Historia -->
-    <section id="our-story" class="py-16 px-12 md:px-0 bg-gray-100">
-        <div class="container mx-auto">
-            <div class="md:flex items-center">
-                <div class="md:w-1/2 mb-8 md:mb-0">
-                    <h2 class="text-4xl font-extrabold italic uppercase text-gray-900 mb-6 fade-in">Nuestra Historia</h2>
-                    <p class="text-lg text-gray-700 mb-4 fade-in">
-                        Smartraining abrió en 2020, enfrentándose al reto de la pandemia. Adaptamos nuestras clases para entrenar por Zoom, manteniendo a nuestros socios activos y motivados desde casa.
-                    </p>
-                    <p class="text-lg text-gray-700 mb-4 fade-in">
-                        Nuestras primeras clases eran limitadas a 4 personas, pero ahora hemos crecido y podemos recibir hasta 16 por turno, manteniendo siempre el enfoque personalizado.
-                    </p>
-                </div>
-                <div class="md:w-1/2 md:pl-8 fade-in">
-                    <img src="../assets/img/viejo-gim.webp" alt="Historia de Smartraining" class="h-auto w-2/3 rounded-lg shadow-lg mx-auto md:mx-0" loading="lazy">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección Crecimiento y Expansión con diseño alternado -->
-    <section id="growth" class="py-16 px-12 md:px-0 bg-white">
-        <div class="container mx-auto md:flex items-center">
-            <div class="md:w-1/2 fade-in">
-                <img src="../assets/img/reforma.png" alt="Crecimiento Smartraining" class="w-72 h-auto object-cover rounded-lg shadow-lg" loading="lazy">
-            </div>
-            <div class="md:w-1/2 md:pl-8">
-                <h2 class="text-4xl font-extrabold italic uppercase text-gray-900 my-6 fade-in">Crecimiento y Expansión</h2>
-                <p class="text-lg text-gray-700 mb-6 fade-in">
-                    Esta es la segunda vez que mudamos nuestras instalaciones, ampliando para brindar más espacio y mejores oportunidades para entrenar, manteniendo nuestro compromiso de calidad.
+    <section id="hero" class="relative h-screen bg-cover bg-center" style="background-image: url('../assets/img/sobre-nosotros/smt-38.jpg');">
+        <div class="absolute inset-0 bg-black opacity-50"></div> <!-- Overlay oscuro -->
+        <div class="relative z-10 flex items-center justify-center h-full text-center px-4">
+            <div class="max-w-2xl">
+                <h1 class="text-5xl font-extrabold text-white uppercase mb-6">Sobre Nosotros</h1>
+                <p class="text-lg text-white mb-6">
+                    En Smartraining ofrecemos una experiencia de entrenamiento única, combinando lo físico y lo mental. Conoce nuestra historia y lo que nos hace diferentes.
                 </p>
-                <p class="text-lg text-gray-700 fade-in">
-                    Con cada mudanza, hemos ampliado nuestros servicios, asegurando que todos los socios reciban atención personalizada y un entrenamiento adaptado a sus necesidades.
-                </p>
+                <a href="#equipo" class="bg-gradient-to-r from-orange-500 to-red-500 text-white py-3 px-6 rounded-full text-lg font-semibold hover:from-red-500 hover:to-orange-500 transition-all">
+                    Conoce a nuestro equipo
+                </a>
             </div>
         </div>
     </section>
+    
 
-    <!-- Sección de Misión y Valores -->
-    <section id="mision-valores" class="py-16 bg-white">
-        <div class="container mx-auto px-6 md:px-0 text-center">
-            <h2 class="text-4xl font-extrabold italic uppercase text-gray-900 mb-6">Nuestra Misión y Valores</h2>
-            <p class="text-lg text-gray-700 mb-8">
-                En Smartraining, creemos en la superación personal, en el esfuerzo y en la comunidad. Nos esforzamos por crear un ambiente inclusivo y adaptable a todas las capacidades físicas.
-            </p>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div>
-                    <h3 class="text-xl font-bold text-red-600 mb-4">Inclusión</h3>
-                    <p class="text-gray-600">Damos la bienvenida a personas de todas las edades, géneros y habilidades, con entrenamientos personalizados para cada uno.</p>
+    <section id="nuestra-historia" class="pt-20 md:pb-20 bg-white">
+        <div class="container mx-auto px-6 ">
+            <h2 class="text-4xl font-extrabold italic uppercase text-gray-900 mb-12 text-center">Nuestra Historia</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <!-- Imagen 1 -->
+                <div class="order-1 flex justify-center">
+                    <img src="../assets/img/viejo-gim.webp" alt="Nuestra historia" class="rounded-lg shadow-lg w-full max-w-md h-auto max-h-80 object-cover" />
                 </div>
-                <div>
-                    <h3 class="text-xl font-bold text-red-600 mb-4">Compromiso</h3>
-                    <p class="text-gray-600">Nos comprometemos a ofrecerte lo mejor de nuestros entrenadores y nuestras instalaciones, ayudándote a alcanzar tus metas.</p>
-                </div>
-                <div>
-                    <h3 class="text-xl font-bold text-red-600 mb-4">Superación</h3>
-                    <p class="text-gray-600">Creemos que siempre hay una versión mejor de ti. Te ayudamos a descubrirla en cada entrenamiento.</p>
+                <!-- Texto -->
+                <div class="order-2 text-left max-w-lg mx-auto md:mx-0">
+                    <p class="text-lg mb-4 text-black">
+                        Smartraining nació en 2020, en medio de la pandemia, con la misión de mantener a las personas activas y mentalmente fuertes en tiempos difíciles. Desde el primer día, ofrecimos clases en línea para asegurarnos de que nuestros socios pudieran entrenar desde casa.
+                    </p>
+                    <p class="text-lg mb-4 text-black">
+                        A medida que crecíamos, pasamos de entrenamientos virtuales a clases presenciales en un pequeño local. Con el apoyo de nuestros socios y el compromiso de nuestro equipo, superamos los desafíos del inicio y continuamos innovando.
+                    </p>
+                    <p class="text-lg text-black">
+                        Hoy, Smartraining se ha convertido en un referente en la comunidad de Canelones, liderando con el entrenamiento físico y mental.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
+    
+    <section id="nuestra-historia" class="pb-20 bg-white mt-8">
+        <div class="container mx-auto px-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <!-- Texto -->
+                <div class="text-left">
+                    <p class="text-lg mb-4 text-black">
+                        Desde nuestros humildes comienzos en 2020, Smartraining ha crecido exponencialmente. Empezamos con clases limitadas y un pequeño espacio, pero gracias al esfuerzo de nuestro equipo y la confianza de nuestros socios, hemos ampliado nuestra capacidad y servicios.
+                    </p>
+                    <p class="text-lg mb-4 text-black">
+                        Hoy contamos con instalaciones mejoradas y una oferta de entrenamientos más completa, incluyendo Crosstraining, entrenamiento funcional, y mucho más. La expansión a nuestras nuevas instalaciones es solo el comienzo de todo lo que está por venir.
+                    </p>
+                    <p class="text-lg text-black">
+                        Nos enorgullece ser el primer gimnasio en Canelones en incorporar Crosstraining y en seguir liderando con innovación y dedicación.
+                    </p>
+                </div>
+                <!-- Imagen 2 -->
+                <div class="order-3 flex justify-center">
+                    <img src="../assets/img/gim-viejonuevo.webp" alt="Nuestra historia" class="rounded-lg shadow-lg w-full max-w-md h-auto max-h-80 object-cover" />
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="crecimiento-expansion" class="pt-10 pb-20 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-extrabold italic uppercase text-black mb-12">Crecimiento y Expansión</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <!-- Texto -->
+                <div class="text-center md:text-left">
+                    <p class="text-lg mb-4 text-black">
+                        Ahora, Smartraining se prepara para una nueva etapa emocionante: la mudanza a nuestras nuevas instalaciones. Este nuevo espacio está diseñado para ofrecer más comodidad y mejores recursos a nuestros socios, con áreas ampliadas para Crosstraining, Pilates, entrenamiento funcional y mucho más.
+                    <p class="text-lg mb-4 text-black">
+                        Este es solo el comienzo de una etapa de expansión, donde seguiremos innovando y brindando el mejor ambiente para el desarrollo físico y mental. Estamos comprometidos a crecer junto con nuestra comunidad y continuar liderando en el ámbito del fitness en Canelones.                    </p>
+                    </p>
+                </div>
+                <!-- Imagen -->
+                <div>
+                    <img src="../assets/img/reforma.webp" alt="Crecimiento y expansión" class="rounded-lg shadow-lg w-full h-auto object-cover" />
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="mision-valores" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-extrabold italic uppercase text-gray-900 mb-12 text-center">Nuestra Misión y Valores</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Valor 1 -->
+                <div class="flex items-start space-x-4">
+                    <div class="w-10 h-10 border-4 border-orange-600 rounded-full flex-shrink-0"></div>
+                    <div>
+                        <h3 class="text-xl font-extrabold italic uppercase text-orange-600">Trabajo en equipo</h3>
+                        <p class="text-black">Colaboramos para alcanzar metas comunes, potenciando el esfuerzo colectivo.</p>
+                    </div>
+                </div>
+                <!-- Valor 2 -->
+                <div class="flex items-start space-x-4">
+                    <div class="w-10 h-10 border-4 border-orange-600 rounded-full flex-shrink-0"></div>
+                    <div>
+                        <h3 class="text-xl font-extrabold italic uppercase text-orange-600">Inclusión</h3>
+                        <p class="text-black">Creamos un espacio accesible y diverso para todos, sin importar su origen o capacidad.</p>
+                    </div>
+                </div>
+                <!-- Valor 3 -->
+                <div class="flex items-start space-x-4">
+                    <div class="w-10 h-10 border-4 border-orange-600 rounded-full flex-shrink-0"></div>
+                    <div>
+                        <h3 class="text-xl font-extrabold italic uppercase text-orange-600">Superación</h3>
+                        <p class="text-black">Fomentamos el desarrollo continuo, superando nuestros límites día a día.</p>
+                    </div>
+                </div>
+                <!-- Valor 4 -->
+                <div class="flex items-start space-x-4">
+                    <div class="w-10 h-10 border-4 border-orange-600 rounded-full flex-shrink-0"></div>
+                    <div>
+                        <h3 class="text-xl font-extrabold italic uppercase text-orange-600">Esfuerzo</h3>
+                        <p class="text-black">Valoramos el trabajo duro y la dedicación para lograr el máximo potencial.</p>
+                    </div>
+                </div>
+                <!-- Valor 5 -->
+                <div class="flex items-start space-x-4">
+                    <div class="w-10 h-10 border-4 border-orange-600 rounded-full flex-shrink-0"></div>
+                    <div>
+                        <h3 class="text-xl font-extrabold italic uppercase text-orange-600">Compromiso</h3>
+                        <p class="text-black">Nos comprometemos con nuestros valores y con los objetivos de nuestros socios y clientes.</p>
+                    </div>
+                </div>
+                <!-- Valor 6 -->
+                <div class="flex items-start space-x-4">
+                    <div class="w-10 h-10 border-4 border-orange-600 rounded-full flex-shrink-0"></div>
+                    <div>
+                        <h3 class="text-xl font-extrabold italic uppercase text-orange-600">Empatía</h3>
+                        <p class="text-black">Entendemos las necesidades de nuestros clientes y colaboradores, ofreciendo apoyo constante.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
 
     <!-- Sección del equipo -->
     <section id="equipo" class="py-16 bg-gray-50">
@@ -150,7 +220,7 @@
     <!-- Sección CTA Final -->
     <section id="cta" class="py-16 bg-gray-50 text-center">
         <div class="container mx-auto px-6 md:px-0">
-            <h2 class="text-4xl font-extrabold italic uppercase text-gray-900 mb-6">Únete a Nosotros</h2>
+            <h2 class="text-4xl font-extrabold italic uppercase text-gray-900 mb-6">Unite a Nosotros</h2>
             <p class="text-lg text-gray-600 mb-6">Forma parte de nuestra comunidad y lleva tu entrenamiento al siguiente nivel.</p>
             <a href="./contacto.html" class="inline-block px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 text-white font-bold rounded-full shadow-lg hover:bg-red-700 transition duration-300">Contáctanos</a>
         </div>
