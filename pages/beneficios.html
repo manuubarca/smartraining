@@ -1,10 +1,217 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beneficios</title>
+    <title>Beneficios para Socios - Smartraining</title>
+    <link rel="stylesheet" href="../dist/styles.css">
+    <link rel="stylesheet" href="../css/main.css">
 </head>
-<body>
+<body class="bg-gray-100 text-gray-900 font-sans">
+
     
+     <!-- Header -->
+     <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto p-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="../index.html" class="block text-black md:hover:text-red-600">
+                    <img src="../assets/svg/imago_gr_sg.svg" alt="Logo Smartraining" class="h-10 w-auto mx-4">
+                </a>
+            </div>
+
+            <!-- Botón del menú hamburguesa -->
+            <button id="menu-toggle" class="block md:hidden text-black focus:outline-none">
+                <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+
+            <!-- Menú de navegación -->
+            <nav id="menu" class="hidden md:flex space-x-6">
+                <a href="../index.html" class="block text-black md:hover:text-red-600">Inicio</a>
+                <a href="../pages/nuestras-clases.html" class="block text-black md:hover:text-red-600">Nuestras clases</a>
+                <a href="../pages/sobre-nosotros.html" class="block text-black md:hover:text-red-600">Sobre Nosotros</a>
+                <a href="../pages/app-de-reserva.html" class="block text-black md:hover:text-red-600">App de reserva</a>
+                <a href="../pages/beneficios.html" class="block text-black md:hover:text-red-600">Beneficios</a>
+                <a href="../pages/contacto.html" class="block text-black md:hover:text-red-600">Contacto</a>
+            </nav>
+        </div>
+
+        <!-- Menú para dispositivos móviles -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-lg text-center">
+            <nav class="px-4 pt-4 pb-4 space-y-4">
+                <a href="../index.html" class="block text-black md:hover:text-red-600">Inicio</a>
+                <a href="../pages/nuestras-clases.html" class="block text-black md:hover:text-red-600">Nuestras clases</a>
+                <a href="../pages/sobre-nosotros.html" class="block text-black md:hover:text-red-600">Sobre Nosotros</a>
+                <a href="../pages/app-de-reserva.html" class="block text-black md:hover:text-red-600">App de reserva</a>
+                <a href="../pages/beneficios.html" class="block text-black md:hover:text-red-600">Beneficios</a>
+                <a href="../pages/contacto.html" class="block text-black md:hover:text-red-600">Contacto</a>
+            </nav>
+        </div>
+
+    </header>
+
+    <section class="bg-red-600 text-white py-16 px-12">
+        <div class="flex flex-col md:flex-row items-center justify-center mx-auto">
+            <div class="md:w-6/12">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Beneficios Exclusivos para Socios</h1>
+                <p class="text-lg md:text-xl mb-6">¡Aprovecha los descuentos y ventajas por ser parte de Smartraining!</p>
+           </div>
+        </div>
+    </section>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Grid for Benefits -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Benefit 1: Almendrana -->
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                <img class="w-full h-56 object-cover" src="../assets/img/beneficios/almendrana.webp" alt="logo Almendrana">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold">Almendrana</h3>
+                    <p class="mt-2 text-gray-600">10% de descuento en compras mayores a $1000 presentando tu comprobante de pago del gimnasio.</p>
+                </div>
+            </div>
+
+            <!-- Beneficio 12: Puntovet -->
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                <img class="w-full h-56 object-cover" src="../assets/img/beneficios/punto-vet.webp" alt="logo Puntovet">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold">Puntovet</h3>
+                    <ul class="mt-2 text-gray-600 list-disc list-inside">
+                        <li>50% de descuento en tu primer año como socio</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Benefit 2: Calel -->
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                <img class="w-full h-56 object-cover" src="../assets/img/beneficios/calel.webp" alt="logo Calel">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold">Calel</h3>
+                    <p class="mt-2 text-gray-600">5% de descuento en todas las compras en su tienda con tu tarjeta de socio.</p>
+                </div>
+            </div>
+
+            <!-- Benefit 3: GH Equipamientos -->
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                <img class="w-full h-56 object-cover" src="../assets/img/beneficios/gh-equipamientos.webp" alt="logo GH Equipamientos Descuento">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold">GH Equipamientos</h3>
+                    <p class="mt-2 text-gray-600">10% de descuento presentando tu comprobante de pago.</p>
+                </div>
+            </div>
+
+            <!-- Beneficio 8: Under Armour -->
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                <img class="w-full h-56 object-cover" src="../assets/img/beneficios/under-armour.webp" alt="logo Under Armour">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold">Under Armour</h3>
+                    <ul class="mt-2 text-gray-600 list-disc list-inside">
+                        <li>20% de descuento durante todo el año</li>
+                        <li>30% de descuento en fechas especiales establecidas por Under Armour</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Benefit 4: Solution Viajes -->
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold">Solution Viajes</h3>
+                    <ul class="mt-2 text-gray-600 list-disc list-inside">
+                        <li>10% en paquetes vacacionales</li>
+                        <li>5% en pasajes aéreos</li>
+                        <li>15% en seguros de asistencia médica</li>
+                        <li>10% en alquiler de vehículos en el exterior</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Benefit 5: Dental Works -->
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold">Dental Works</h3>
+                    <p class="mt-2 text-gray-600">15% de descuento en todos los tratamientos presentando tu documento de identidad.</p>
+                </div>
+            </div>
+
+            <!-- Benefit 6: On Beauty Spa -->
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold">On Beauty Spa</h3>
+                    <ul class="mt-2 text-gray-600 list-disc list-inside">
+                        <li>2x1 en día de spa</li>
+                        <li>2x1 en depilación definitiva</li>
+                        <li>20% de descuento en ducha solar</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Benefit 7: La casa del Multifocal -->
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold">La casa del Multifocal</h3>
+                    <ul class="mt-2 text-gray-600 list-disc list-inside">
+                        <li>25% en lentes (armazón + cristales)</li>
+                        <li>20% en lentes de sol</li>
+                        <li>10% en lentes de contacto y promos</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Beneficio 9: Integrale ozonoterapia -->
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold">Integrale ozonoterapia</h3>
+                    <ul class="mt-2 text-gray-600 list-disc list-inside">
+                        <li>15% de descuento en todos los tratamientos</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Beneficio 10: MediLab -->
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold">MediLab</h3>
+                    <ul class="mt-2 text-gray-600 list-disc list-inside">
+                        <li>30% de descuento en todos los servicios</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Beneficio 11: Bresciani Plateria Criolla -->
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold">Bresciani Plateria Criolla</h3>
+                    <ul class="mt-2 text-gray-600 list-disc list-inside">
+                        <li>15% en todos los productos</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Botón flotante para volver arriba -->
+    <a href="#" id="back-to-top" class="fixed bottom-8 right-8 bg-gradient-to-r from-red-600 to-orange-600 text-white w-12 h-12 flex items-center justify-center rounded-full shadow-lg transition duration-300 hover:from-red-700 hover:to-orange-700 z-50">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+        </svg>
+    </a>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Smartraining. Todos los derechos reservados.</p>
+            <div class="mt-4">
+                <a href="https://www.facebook.com/Smartraining.uy" class="text-gray-400 md:hover:text-white mx-2">Facebook</a>
+                <a href="https://www.instagram.com/smartraining.uy/" class="text-gray-400 md:hover:text-white mx-2">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Enlace al archivo de JavaScript -->
+    <script src="../js/logica.js"></script>
+
 </body>
+</html>
